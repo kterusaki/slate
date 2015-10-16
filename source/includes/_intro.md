@@ -25,7 +25,7 @@ Each request is followed by a response in the form of a JSON object. Our sdk's u
 
 ## Errors
 
-> The structure of an error object
+> Error object structure
 
 ```
 {
@@ -44,13 +44,15 @@ The error code does its best to describe the issue you're having. Generally,
 Error Code|Message|Description
 ---|---|---
 200 | OK | normal successful request
-|||
 400 | Bad Request | missing or malformed parameter
 401 | Unauthorized | missing credentials
 403 | Forbidden | provided key does not have access for that method
 404 | Not Found | requested object does not exist
 422 | Unprocessable Entity | often the posted object is malformed
 429 | Too Many Requests | exceeded rate limits 
-|||
 500 | Server Error | some sort of server issue
 503 | Service Unavailable | likely a deploy is occurring, wait 2 minutes and retry
+
+### Rate Limits
+
+Each API key is limited to a certain number of requests per day. Currently, the limit is __100k requests__ per calendar day. Any further requests will return error code 429 until the next day begins. 
