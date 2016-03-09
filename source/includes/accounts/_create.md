@@ -4,50 +4,58 @@
 
 ```shell
 curl "http://api.salesforceiq.com/v2/accounts"
-    -X POST
-    -u [API Key] : [API Secret]
-    -H 'Content-Type: application/json'
-    -H 'Accept: application/json'
-    -d '{
-        "name" : "Account"
-        "fieldValues": {
-            "12": [
-                {
-                    "raw": "1"
-                }
-            ],
-            "16": [
-                {
-                    "raw": "2015-03-17"
-                }
-            ],
-            "17": [
-                {
-                    "raw": "Yes"
-                }
-            ],
-            "18": [
-                {
-                    "raw": "2014-09-17"
-                }
-            ],
-            "28": [
-                {
-                    "raw": "1400.00"
-                }
-            ]
+  -X POST
+  -u [API Key]:[API Secret]
+  -H 'Content-Type: application/json'
+  -H 'Accept: application/json'
+  -d '{ 
+        "name": "Avocado, Inc.",
+        "fieldValues": { 
+          "address": [ { "raw": "502 Emersont St, Palo Alto, CA 94301" } ],
+          "primary_contact": [{"raw": "56b11a80e4b0b5663a53403e@Cecilia Avocado"}],
+          "2": [ { "raw": "CEO" } ],
+          "6": [ { "raw": "jmcsales@sales.com" } ],
+          "12": [ { "raw": "2" } ],
+          "14": [ { "raw": "93" } ],
+          "16": [ { "raw": "2017-2-1" } ],
+          "18": [ 
+            { "raw": "0" }, 
+            { "raw": "1" } 
+          ]
         }
-    }'
+      }
 ```
 
 ```ruby 
 require 'riq'
+
 RIQ.init(ENV['API_KEY'], ENV['API_SECRET'])
 
 a = RIQ.account
-a.name = 'Bruce Wayne'
-a.field_value(3, 'Batmobile')
+a.name = 'Avocado, Inc.'
+a.field_value('address', '502 Emersont St, Palo Alto, CA 94301')
+a.field_value('primary_contact', 'c.avacado@avocado.com')
+a.field_value(2, 'CEO')
+a.field_value(6, 'jmcsales@sales.com')
+a.field_value(12, 2)
+a.field_value(14, 93)
+a.field_value(16, '2017-2-1')
+a.field_value(18, ['1', '2']) # Not possible via ruby wrapper
 a.save
+
+puts a.data
+```
+
+```python
+from relateiq.client import RelateIQ
+from relateiq.accounts import Account
+
+RelateIQ("[API Key]", "[API Secret]")
+account = Account()
+account.name('Avocado, Inc.')
+account.create()
+
+print account
 ```
 
 > Response
@@ -55,50 +63,48 @@ a.save
 ```shell
 HTTP/1.1 200 OK
 {
-    "id" : "abcdef1234567890abcdef0b",
-    "modifiedDate" : 1000000000000,
-    "name" : "Wonka Industries",
-    "fieldValues": {
-        "12": [
-            {
-                "raw": "1"
-            }
-        ],
-        "16": [
-            {
-                "raw": "2015-03-17"
-            }
-        ],
-        "17": [
-            {
-                "raw": "Yes"
-            }
-        ],
-        "18": [
-            {
-                "raw": "2014-09-17"
-            }
-        ],
-        "28": [
-            {
-                "raw": "1400.00"
-            }
-        ]
-    }
+  "id": "56abd666e4b07f4066b7bcdc",
+  "name": "Avocado, Inc.",
+  "fieldValues": { 
+    "address": [ { "raw": "502 Emersont St, Palo Alto, CA 94301" } ],
+    "primary_contact": [{"raw": "56b11a80e4b0b5663a53403e@Cecilia Avocado"}],
+    "2": [ { "raw": "CEO" } ],
+    "6": [ { "raw": "jmcsales@sales.com" } ],
+    "12": [ { "raw": "2" } ],
+    "14": [ { "raw": "93" } ],
+    "16": [ { "raw": "2017-2-1" } ],
+    "18": [ 
+      { "raw": "0" }, 
+      { "raw": "1" } 
+    ]
+  }
 }
 ```
 
 ```ruby
-a.data == {
-    :id => "554ba25ae4b0d60ae8bf32b0", 
-    :name => "Bruce Wayne", 
-    :field_values => {
-        :"3" => "10",
-        :"5" => "15"
-    }
+{ 
+  :id=>"56abd666e4b07f4066b7bcdc", 
+  :name=>"Avocado, Inc.", 
+  :field_values => {    
+    :"2" => "0", 
+    :"4" => "avocado@gmail.com", 
+    :"6" => "56155a21e4b0fee51b1cb043",     
+    :"12" => "2", 
+    :"14" => "94",     
+    :"16" => "2017-02-01",     
+    :"18" => ["0", "1"], 
+    :address => "117 University Ave, Palo Alto, CA 94301", 
+    :primary_contact=>"56b11a80e4b0b5663a53403e@Cecilia Avocado"
+  }
 }
 ```
 
+```python
+{
+  "id" : "56abd666e4b07f4066b7bcdc",
+  "name" : "Avocado, Inc."
+}
+```
 `POST /accounts`
 
 A POST request which creates a new Account object and returns the created Account with its new unique ID.

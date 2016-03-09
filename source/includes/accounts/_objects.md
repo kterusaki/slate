@@ -1,100 +1,57 @@
-# Account Properties
-
-These are a set of values that can apply to every Account in the Organization. Data is stored as a hash of keys and either naked value or id of the picklist value.
-
-If the field being updated is a Picklist, make sure to save the When creating or updating Accounts, only the fields with values need to be included in the Account object, all other fields will be left unchanged or created with their default value.
-
 # Accounts
 
-Accounts in SalesforceIQ represent companies. Accounts can have any kind of relationship with your Organization- they could be leads, clients, former clients, or partners of your company.
+Accounts in SalesforceIQ represent companies. Accounts can have any kind of relationship with your Organization - they could be leads, clients, former clients, or partners of your company.
 
-The API can access all of your Organization’s Accounts, and all Accounts created by the API are shared with your entire Organization.
+The API can access all of your Organization’s Accounts, and all Accounts created by the API are shared with your entire Organization. If you are trying to create an Account within a List please refer to the List Items (Relationship) API endpoint below.
 
 ## Account Object
 
 > Definition
 
-```ruby
+```shell
 {
-    :id => "554ba25ae4b0d60ae8bf32b0", 
-    :name => "Bruce Wayne", 
-    :field_values => {
-        :"3" => "10",
-        :"5" => "15"
-    }
+  "id": "56abd666e4b07f4066b7bcdc",
+  "modifiedDate": 1456874998553,
+  "name": "Avocado, Inc.",
+  "fieldValues": {
+    "4": [ { "raw": "avocado@gmail.com" } ],  // Email (Text)
+    "6": [ { "raw": "56155a21e4b0fee51b1cb043" } ], // Collaborators (User)
+    "12": [ { "raw": "2" } ], // SLA (List)
+    "14": [ { "raw": "94" } ],  // CSAT (Number)
+    "16": [ { "raw": "2017-02-01" } ],  // Contract End Date (Date)
+    "18": [                             // Industry (Picklist)
+      { "raw": "0" },
+      { "raw": "1" }
+    ],
+    "address": [ { "raw": "117 University Ave, Palo Alto, CA 94301" } ],  // Address (Location)
+    "primary_contact": [ { "raw": "56b11a80e4b0b5663a53403e@Cecilia Avocado" } ]  // Primary Contact (Contact)
+  }
 }
 ```
 
-```shell
-{
-    "id" : "5605c007e4b070cf77fe1458",
-    "modifiedDate" : "1443217415405",
-    "name" : "Initech",
-    "fieldValues": {
-        "12": [
-            {
-                "raw": "1"
-            }
-        ],
-        "16": [
-            {
-                "raw": "2015-03-17"
-            }
-        ],
-        "17": [
-            {
-                "raw": "Yes"
-            }
-        ],
-        "18": [
-            {
-                "raw": "2014-09-17"
-            }
-        ],
-        "28": [
-            {
-                "raw": "1400.00"
-            }
-        ]
-    }
+```ruby
+{ 
+  :id=>"56abd666e4b07f4066b7bcdc", 
+  :name=>"Avocado, Inc.", 
+  :field_values => {    
+    :"4" => "avocado@gmail.com",  # Email (Text)
+    :"6" => "56155a21e4b0fee51b1cb043", # Collaborators (User)
+    :"12" => "2", # SLA (List)
+    :"14" => "94",  # CSAT (Number)     
+    :"16" => "2017-02-01",  # Contract End Date (Date)
+    :"18" => ["0", "1"],  # Industry (Picklist)
+    :address => "117 University Ave, Palo Alto, CA 94301", # Address (Location)
+    :primary_contact=>"56b11a80e4b0b5663a53403e@Cecilia Avocado"  # Primary Contact (Contact)
+  }
 }
 ```
 
 ```python
 {
-    "id" : "5605c007e4b070cf77fe1458",
-    "modifiedDate" : "1443217415405",
-    "name" : "Initech",
-    "fieldValues": {
-        "12": [
-            {
-                "raw": "1"
-            }
-        ],
-        "16": [
-            {
-                "raw": "2015-03-17"
-            }
-        ],
-        "17": [
-            {
-                "raw": "Yes"
-            }
-        ],
-        "18": [
-            {
-                "raw": "2014-09-17"
-            }
-        ],
-        "28": [
-            {
-                "raw": "1400.00"
-            }
-        ]
-    }
+  "id" : "56abd666e4b07f4066b7bcdc",
+  "name" : "Avocado, Inc."
 }
 ```
-
 
 Parameter | Type | Description
 --- | --- | ---
@@ -102,4 +59,3 @@ id | Text | UUID, created by the system
 modifiedDate | Numeric | milliseconds since (UTC) epoch
 name | Text | Account name as it will appear in SalesforceIQ
 fieldValues | Hash | A collection of values for Account Property objects. For details about saving account propery data, see [that section](#account-properties).
-

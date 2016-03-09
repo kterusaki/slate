@@ -17,7 +17,8 @@ includes:
   - accounts/fetch_one
   - accounts/create
   - accounts/update
-  - contacts
+  - accounts/properties
+  - contacts/objects
 
 search: true
 ---
