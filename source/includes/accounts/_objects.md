@@ -2,7 +2,7 @@
 
 Accounts in SalesforceIQ represent companies. Accounts can have any kind of relationship with your Organization - they could be leads, clients, former clients, or partners of your company.
 
-The API can access all of your Organization’s Accounts, and all Accounts created by the API are shared with your entire Organization. If you are trying to create an Account within a List please refer to the List Items (Relationship) API endpoint below.
+The API can access all of your Organization’s Accounts, and all Accounts created by the API are shared with your entire Organization. If you are trying to create an Account within a List please refer to the [List Items (Relationship) API endpoint](#list-items).
 
 ## Account Object
 

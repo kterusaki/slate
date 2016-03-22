@@ -9,6 +9,12 @@ curl 'https://api.salesforceiq.com/v2/accounts'
   -u [API Key]:[API Secret]
   -H 'Accept: application/json'
 
+// Retrieve two Accounts by Ids in your Organization
+curl 'https://api.salesforceiq.com/v2/accounts?_ids=56abd666e4b07f4066b7bcdc, 56b3acf5e4b0a8f6a0711488'
+  -X GET
+  -u [API Key]:[API Secret]
+  -H 'Accept: application/json'
+
 // Retrieve all Accounts where modifiedDate > 1456874990000
 curl 'https://api.salesforceiq.com/v2/accounts?modifiedDate=1456874990000'
   -X GET
@@ -29,6 +35,12 @@ RIQ.init(ENV['API_KEY'], ENV['API_SECRET'])
 
 # Retrieve all Accounts in your Organization
 RIQ.accounts.each do |a|
+  puts a.data
+end
+
+# Retrieve two Accounts by Ids in your Organization
+accounts = RIQ.accounts({:_ids = > ['56abd666e4b07f4066b7bcdc', '56b3acf5e4b0a8f6a0711488']})
+accounts.each do |a|
   puts a.data
 end
 
@@ -53,6 +65,11 @@ RelateIQ("[API Key]", "[API Secret]")
 
 # Retrieve all Accounts in your Organization
 account = Account()
+print account.fetchPage()
+
+# Retrieve two Accounts by Ids in your Organization
+account = Account()
+account.setFetchOptions({ '_ids': '56abd666e4b07f4066b7bcdc, 56b3acf5e4b0a8f6a0711488' })
 print account.fetchPage()
 
 # Retrieve all Accounts where modifiedDate > 1456874990000
@@ -130,7 +147,51 @@ HTTP/1.1 200 OK
       "name": "Fitbot",
       "fieldValues": {}
     }
-  ]
+  ],
+  "nextPage": null
+}
+
+// Two Accounts by Ids in your Organization
+{
+  "objects": [
+    {
+      "id": "56abd666e4b07f4066b7bcdc",
+      "modifiedDate": 1457647315084,
+      "name": "Avocado, Inc.",
+      "fieldValues": {
+        "4": [ { "raw": "avocado@gmail.com" } ],
+        "6": [ { "raw": "56155a21e4b0fee51b1cb043" } ],
+        "12": [ { "raw": "2" } ],
+        "14": [ { "raw": "93" } ],
+        "16": [ { "raw": "2017-02-01" } ],
+        "18": [ 
+          { "raw": "0" },
+          { "raw": "1" }
+        ],
+        "address": [ { "raw": "117 University Ave, Palo Alto, CA 94301" } ],
+        "primary_contact": [ { "raw": "56b12644e4b08b67fd722d75@Cecilia Avocado" } ]
+      }
+    },
+    {
+      "id": "56b3acf5e4b0a8f6a0711488",
+      "modifiedDate": 1454615797215,
+      "name": "Model Minutes Inc",
+      "fieldValues": {
+        "4": [ { "raw": "tminutes@gmail.com" } ],
+        "6": [ { "raw": "54eb546ee4b07744e41db93b" } ],
+        "12": [ { "raw": "2" } ],
+        "14": [ { "raw": "82" } ],
+        "16": [ { "raw": "2016-03-25" } ],
+        "18": [ 
+          { "raw": "0" }, 
+          { "raw": "3" } 
+        ],
+        "address": [ { "raw": "50 Fremont Street, San Francisco, CA 94105" } ],
+        "primary_contact": [ { "raw": "56df75a4e4b03009e48e8e76@Tim Minutes" } ]
+      }
+    }    
+  ],
+  "nextPage": null
 }
 
 // All Accounts where modifiedDate > 1456874990000
@@ -266,6 +327,35 @@ HTTP/1.1 200 OK
   :field_values => {}
 }
 
+# Two Accounts by Ids in your Organization
+{ :id => "56abd666e4b07f4066b7bcdc", 
+  :name => "Avocado, Inc.", 
+  :field_values =>  {    
+    :"4" => "avocado@gmail.com", 
+    :"6 "=> "56155a21e4b0fee51b1cb043", 
+    :"12" => "2",     
+    :"14" => "94", 
+    :"16" => "2017-02-01", 
+    :"18" => ["0", "1"], 
+    :address => "117 University Ave, Palo Alto, CA 94301", 
+    :primary_contact=>"56b11a80e4b0b5663a53403e@Cecilia Avocado"
+  }
+}
+{ 
+  :id => "56b3acf5e4b0a8f6a0711488", 
+  :name => "Model Minutes Inc", 
+  :field_values => {    
+    :"4" => "tminutes@gmail.com", 
+    :"6" => "54eb546ee4b07744e41db93b", 
+    :"16" => "2016-03-25", 
+    :"12" => "2", 
+    :"14" => "82", 
+    :"18" => ["0", "3"], 
+    :address => "50 Fremont Street, San Francisco, CA 94105", 
+    :primary_contact => "56df75a4e4b03009e48e8e76@Tim Minutes"
+  }
+}
+
 # All Accounts where modifiedDate > 1456874990000
 { :id => "56abd666e4b07f4066b7bcdc", 
   :name => "Avocado, Inc.", 
@@ -343,6 +433,17 @@ HTTP/1.1 200 OK
   {
     "id" : "56df7a47e4b0f4b562879dfb",
     "name" : "Fitbot"
+  }
+]
+
+# Two Accounts by Ids in your Organization
+[
+  {
+    "id" : "56b3acf5e4b0a8f6a0711488",
+    "name" : "Model Minutes Inc"
+  }, {
+    "id" : "56abd666e4b07f4066b7bcdc",
+    "name" : "Avocado, Inc."
   }
 ]
 

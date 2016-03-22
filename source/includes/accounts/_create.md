@@ -110,3 +110,8 @@ HTTP/1.1 200 OK
 A POST request which creates a new Account object and returns the created Account with its new unique ID.
 
 If you create a new account through the API it will only create new Accounts for unique names.
+
+### Payload
+Parameter | Type | Description
+--------- | ------- | -----------
+newAccount | Object (required) | A JSON representation of an Account, without the id or modifiedDate fields (which will be generated on creation).

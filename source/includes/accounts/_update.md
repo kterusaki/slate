@@ -9,7 +9,7 @@ curl 'https://api.salesforceiq.com/v2/accounts/568ed01fe4b0b69244577452'
   -H 'Content-Type: application/json'
   -H 'Accept: application/json'
   -d '{
-      "id" : "568ed01fe4b0b69244577452",
+      "id" : "568ed01fe4b0b69244577452", // required
       "name": "Jamjilla"
     }'
 ```
@@ -69,3 +69,13 @@ HTTP/1.1 200 OK
 `PUT /accounts/{id}`
 
 A PUT request which updates the details of a specific Account. The id and name are required keys in the body.
+
+### Query Parameters
+Parameter | Type | Description
+--------- | ------- | -----------
+id | Text (required) | The unique identifier for the Account to be updated.
+
+### Payload
+Parameter | Type | Description
+--------- | ------- | -----------
+updatedAccount | JSON (required) | A full Account object including any updated Account data should be included in the body of the request. The id attribute is required in the Account object.
