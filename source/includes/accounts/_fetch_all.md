@@ -3,25 +3,25 @@
 > Request
 
 ```shell
-// Retrieve all Accounts in your Organization
+# Retrieve all Accounts in your Organization
 curl 'https://api.salesforceiq.com/v2/accounts'
   -X GET
   -u [API Key]:[API Secret]
   -H 'Accept: application/json'
 
-// Retrieve two Accounts by Ids in your Organization
+# Retrieve two Accounts by Ids in your Organization
 curl 'https://api.salesforceiq.com/v2/accounts?_ids=56abd666e4b07f4066b7bcdc, 56b3acf5e4b0a8f6a0711488'
   -X GET
   -u [API Key]:[API Secret]
   -H 'Accept: application/json'
 
-// Retrieve all Accounts where modifiedDate > 1456874990000
+# Retrieve all Accounts where modifiedDate > 1456874990000
 curl 'https://api.salesforceiq.com/v2/accounts?modifiedDate=1456874990000'
   -X GET
   -u [API Key]:[API Secret]
   -H 'Accept: application/json' 
 
-// Retrieve two Accounts starting at index 1 
+# Retrieve two Accounts starting at index 1 
 curl 'https://api.salesforceiq.com/v2/accounts?_start=1&_limit=2'
   -X GET
   -u [API Key]:[API Secret]
@@ -85,7 +85,7 @@ print account.fetchPage(1, 2)
 > Response
 
 ```shell
-// All Accounts in your Organization
+# All Accounts in your Organization
 HTTP/1.1 200 OK
 {
   "objects": [
@@ -151,7 +151,7 @@ HTTP/1.1 200 OK
   "nextPage": null
 }
 
-// Two Accounts by Ids in your Organization
+# Two Accounts by Ids in your Organization
 {
   "objects": [
     {
@@ -194,7 +194,7 @@ HTTP/1.1 200 OK
   "nextPage": null
 }
 
-// All Accounts where modifiedDate > 1456874990000
+# All Accounts where modifiedDate > 1456874990000
 {
   "objects": [
     {
@@ -240,7 +240,7 @@ HTTP/1.1 200 OK
   ]
 }
 
-// Two accounts starting from index 1 of all Accounts
+# Two accounts starting from index 1 of all Accounts
 {
   "objects": [
     {

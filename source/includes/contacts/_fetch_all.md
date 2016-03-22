@@ -3,25 +3,25 @@
 > Request
 
 ```shell
-// Retrieve all Contacts in your Organization
+## Retrieve all Contacts in your Organization
 curl 'https://api.salesforceiq.com/v2/contacts'
   -X GET
   -u [API Key]:[API Secret]
   -H 'Accept: application/json'
 
-// Retrive two Contacts by Ids in your Organization
+## Retrive two Contacts by Ids in your Organization
 curl 'https://api.salesforceiq.com/v2/contacts?_ids=56b12644e4b08b67fd722d75, 56df75a4e4b03009e48e8e76'
   -X GET
   -u [API Key]:[API Secret]
   -H 'Accept: application/json'
 
-// Retrieve all Contacts where modifiedDate > 1458165069813
+## Retrieve all Contacts where modifiedDate > 1458165069813
 curl 'https://api.salesforceiq.com/v2/contacts?modifiedDate=1458165069813'
   -X GET
   -u [API Key]:[API Secret]
   -H 'Accept: application/json'
 
-// Retrieve two Contacts starting at index 1
+## Retrieve two Contacts starting at index 1
 curl 'https://api.salesforceiq.com/v2/contacts?_start=1&limit=2'
   -X GET
   -u [API Key]:[API Secret]
@@ -41,7 +41,7 @@ TBD
 
 ```shell
 
-// All Contacts in your Organization
+# All Contacts in your Organization
 {
   "objects": [
     {
@@ -257,7 +257,7 @@ TBD
   "nextPage": null
 }
 
-// Two Contacts by Ids in your Organization
+# Two Contacts by Ids in your Organization
 {
   "objects": [
     {
@@ -438,7 +438,7 @@ TBD
   "nextPage": null
 }
 
-// All Contacts where modifiedDate > 1458165069813
+# All Contacts where modifiedDate > 1458165069813
 {
   "objects": [
     {
@@ -528,7 +528,7 @@ TBD
   "nextPage": null
 }
 
-// Two Contacts starting at index 1
+# Two Contacts starting at index 1
 {
   "objects": [    
     {
