@@ -19,6 +19,15 @@ includes:
   - accounts/update
   - accounts/properties
   - contacts/objects
+  - contacts/create
+  - contacts/fetch_all
+  - contacts/fetch_one
+  - contacts/update
+  - lists/objects
+  - lists/fetch_all
+  - lists/fetch_one
+  - list_items/objects
+  - list_items/create
 
 search: true
 ---
