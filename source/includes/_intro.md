@@ -1,5 +1,13 @@
 # Introduction
 
+```shell
+WELCOME!
+
+You are currently viewing examples for Curl. You can use these examples to test the code in your terminal console.
+
+Toggle examples for different languages with the selector above.
+```
+
 The SalesforceIQ API is a full-featured, RESTful interface for interacting with the objects in our system. It allows you to make a lot of the reading and writing actions you would be able to make from inside the app. 
 
 ## Accessing Your Data
@@ -14,10 +22,10 @@ You'll include these with every request, either directly or through one of our s
 
 All request use the root url of `https://api.salesforceiq.com/v2`. For each route, we support one or more of the following HTTP methods: 
 
-* GET: retrieve one or more objects
-* POST: create a new object
-* PUT: update an existing object
-* DELETE: remove and existing object. __NOTE__: This is irreversible. 
+* `GET` retrieve one or more objects
+* `POST` create a new object
+* `PUT` update an existing object
+* `DELETE` remove an existing object. __NOTE__: This is irreversible. 
 
 ## Responses
 
@@ -55,4 +63,4 @@ Error Code|Message|Description
 
 ### Rate Limits
 
-Each API key is limited to a certain number of requests per day. Currently, the limit is __100k requests__ per calendar day. Any further requests will return error code 429 until the next day begins. 
+Each API key is limited to a certain number of requests per day. Currently, the limit is __100k requests__ per calendar day. Any further requests will return error code 429 until the next day begins.

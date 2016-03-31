@@ -73,9 +73,15 @@ A PUT request which updates the details of a specific Account. The id and name a
 ### Query Parameters
 Parameter | Type | Description
 --------- | ------- | -----------
-id | Text (required) | The unique identifier for the Account to be updated.
+id | String (required) | The unique identifier for the Account to be updated.
 
 ### Payload
 Parameter | Type | Description
 --------- | ------- | -----------
-updatedAccount | JSON (required) | A full Account object including any updated Account data should be included in the body of the request. The id attribute is required in the Account object.
+updatedAccount | Object (required) | A full Account object including any updated Account data should be included in the body of the request. The id attribute is required in the Account object.
+
+### Payload Attributes
+Parameter | Type | Description
+--------- | ------- | -----------
+id | String (required) | UUID of the Account to be updated.
+name | String (required) | The existing or updated name of the Account.

@@ -2,7 +2,7 @@
 
 A List is an object that can be created and customized by a User to represent Accounts (companies) or Contacts (people) in a process (such as a sales pipeline). Each list has various Fields (columns) associated with them. 
 
-A List Item is a relationship within your lists and represented as a row in your SalesforceIQ list. Each List Item has values associated with the Fields (columns) called Field Values. For more information about List Items, go to this [section](#list-items)
+A List Item is a relationship within your lists and represented as a row in your SalesforceIQ list. Each List Item has values associated with the Fields (columns) called Field Values. For more information about List Items, go to this [section](#list-items).
 
 A List can either be a Contact-based List or an Account-based List, but not both. Account-based Lists may have multiple Contacts (Points of Contact) associated with each List Item. Contact-based Lists may only have one Contact associated with each List Item.
 
@@ -286,8 +286,8 @@ Additionally, use this endpoint to retrieve the appropriate listOption ids if yo
 
 Parameter | Type | Description
 --- | --- | ---
-id | Text | UUID, The List's unique identifier within SalesforceIQ. ID's are unique alphanumeric strings, 24 characters long.
+id | String | UUID, The List's unique identifier within SalesforceIQ. ID's are unique alphanumeric strings, 24 characters long.
 modifiedDate | Numeric | The time this object was last modified, in UTC milliseconds past the epoch. This field is automatically updated by writing queries and not directly editable.
-title | Text | The title of the List as it will be displayed within SalesforceIQ.
-listType | Text | The type of relationships this list manages. Lists are either Contact-based lists which support only one Contact ID per List Item and no Account ID, or Account-based lists where each List Item has a mapped Account ID and one or more Contact IDs. For certain clients there is a legacy type 'both' which accepts either format, but this functionality has been deprecated for all new Lists and is no longer supported.
-fields | Array | A collection of Field definitions that are associated with the List. These Fields are stored as an array of Field objects, with each Field a mapping of an id, display name, and (in the case of pick list fields) an array of listOptions. The Field's id is a string containing the index of that field in the order they were created; these ids are used to map fields to their values within List Items. The listOptions property maps to an array of option objects, each containing an option id and the display value of that option. When setting the value of these types of fields, these list fields need to be set to this ID rather than their display value.
+title | String | The title of the List as it will be displayed within SalesforceIQ.
+listType | String | The type of relationships this list manages. Lists are either Contact-based lists which support only one Contact ID per List Item and no Account ID, or Account-based lists where each List Item has a mapped Account ID and one or more Contact IDs. For certain clients there is a legacy type 'both' which accepts either format, but this functionality has been deprecated for all new Lists and is no longer supported.
+fields | Object[] | A collection of Field definitions that are associated with the List. These Fields are stored as an array of Field objects, with each Field a mapping of an id, display name, and (in the case of pick list fields) an array of listOptions. The Field's id is a string containing the index of that field in the order they were created; these ids are used to map fields to their values within List Items. The listOptions property maps to an array of option objects, each containing an option id and the display value of that option. When setting the value of these types of fields, these list fields need to be set to this ID rather than their display value.

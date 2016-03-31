@@ -185,7 +185,6 @@ curl 'https://api.salesforceiq.com/v2/lists/56f087b0e4b0584aa39fbba8'
   "size": 0
 }
 ```
-
 `GET /lists/{id}`
 
 A GET request which fetches a single List by its unique identifier.
@@ -193,4 +192,4 @@ A GET request which fetches a single List by its unique identifier.
 ### Query Parameters
 Parameter | Type | Description
 --------- | ------- | -----------
-id | Text (required) | The unique identifier for the List to be fetched.
+id | String (required) | UUID for the List to be fetched.

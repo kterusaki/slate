@@ -115,3 +115,8 @@ If you create a new account through the API it will only create new Accounts for
 Parameter | Type | Description
 --------- | ------- | -----------
 newAccount | Object (required) | A JSON representation of an Account, without the id or modifiedDate fields (which will be generated on creation).
+
+### Payload Attributes
+Parameter | Type | Description
+--------- | ------- | -----------
+name | String (required) | The name of the Account to be created.

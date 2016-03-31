@@ -14,17 +14,17 @@ The API can access all of your Organization’s Accounts, and all Accounts creat
   "modifiedDate": 1456874998553,
   "name": "Avocado, Inc.",
   "fieldValues": {
-    "4": [ { "raw": "avocado@gmail.com" } ],  // Email (Text)
-    "6": [ { "raw": "56155a21e4b0fee51b1cb043" } ], // Collaborators (User)
-    "12": [ { "raw": "2" } ], // SLA (List)
-    "14": [ { "raw": "94" } ],  // CSAT (Number)
-    "16": [ { "raw": "2017-02-01" } ],  // Contract End Date (Date)
-    "18": [                             // Industry (Picklist)
+    "4": [ { "raw": "avocado@gmail.com" } ],  # Email (Text)
+    "6": [ { "raw": "56155a21e4b0fee51b1cb043" } ], # Collaborators (User)
+    "12": [ { "raw": "2" } ], # SLA (List)
+    "14": [ { "raw": "94" } ],  # CSAT (Number)
+    "16": [ { "raw": "2017-02-01" } ],  # Contract End Date (Date)
+    "18": [                             # Industry (Picklist)
       { "raw": "0" },
       { "raw": "1" }
     ],
-    "address": [ { "raw": "117 University Ave, Palo Alto, CA 94301" } ],  // Address (Location)
-    "primary_contact": [ { "raw": "56b11a80e4b0b5663a53403e@Cecilia Avocado" } ]  // Primary Contact (Contact)
+    "address": [ { "raw": "117 University Ave, Palo Alto, CA 94301" } ],  # Address (Location)
+    "primary_contact": [ { "raw": "56b11a80e4b0b5663a53403e@Cecilia Avocado" } ]  # Primary Contact (Contact)
   }
 }
 ```
@@ -55,7 +55,7 @@ The API can access all of your Organization’s Accounts, and all Accounts creat
 
 Parameter | Type | Description
 --- | --- | ---
-id | Text | UUID, created by the system
+id | String | UUID, created by the system
 modifiedDate | Numeric | milliseconds since (UTC) epoch
-name | Text | Account name as it will appear in SalesforceIQ
-fieldValues | Hash | A collection of values for Account Property objects. For details about saving account propery data, see [that section](#account-properties).
+name | String | Account name as it will appear in SalesforceIQ
+fieldValues | Object | A collection of values for Account Property objects. For details about saving account propery data, see [that section](#account-properties).

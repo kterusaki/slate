@@ -12,6 +12,17 @@ language_tabs:
 
 includes:
   - intro
+  - object-model/overview
+  - lists/objects
+  - lists/fetch_all
+  - lists/fetch_one
+  - list-items/objects
+  - list-items/create
+  - list-items/fetch_one
+  - list-items/fetch_all
+  - list-items/update
+  - list-items/delete
+  - list-items/upsert
   - accounts/objects
   - accounts/fetch_all
   - accounts/fetch_one
@@ -23,12 +34,15 @@ includes:
   - contacts/fetch_all
   - contacts/fetch_one
   - contacts/update
-  - lists/objects
-  - lists/fetch_all
-  - lists/fetch_one
-  - list_items/objects
-  - list_items/create
+  - events/objects
+  - events/create
+  - users/objects
+  - users/fetch_one
+  - use-cases/intro
+  - use-cases/webform
+  - use-cases/websiteevent
 
 search: true
+
 ---
 <!-- all of the sections will be in files in ./includes -->

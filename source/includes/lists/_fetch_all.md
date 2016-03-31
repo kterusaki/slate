@@ -609,10 +609,9 @@ curl 'https://api.salesforceiq.com/v2/lists?_start=1&_limit=2'
   "nextPage": null
 }
 ```
-
 `GET /lists`
 
-This endpoint fetches a paginated collection of all Lists in your Organization.
+Retrieve a paginated collection of all Lists in your Organization.
 
 ### Query Parameters
 Parameter | Type | Description

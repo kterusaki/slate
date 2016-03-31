@@ -195,7 +195,6 @@ Cecilia Avocado
 ```python
 TBD
 ```
-
 `POST /contacts`
 
 A POST request which creates a new Contact object and returns the created Contact with its new unique ID.
