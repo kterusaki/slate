@@ -28,12 +28,14 @@ includes:
   - accounts/fetch_one
   - accounts/create
   - accounts/update
+  - accounts/delete
   - accounts/properties
   - contacts/objects
   - contacts/create
   - contacts/fetch_all
   - contacts/fetch_one
   - contacts/update
+  - contacts/delete
   - events/objects
   - events/create
   - users/objects
