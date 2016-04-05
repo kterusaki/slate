@@ -6,13 +6,13 @@
 # Retrieve all Lists in your Organization
 curl 'https://api.salesforceiq.com/v2/lists'
   -X GET
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Accept: application/json'
 
 # Retrieve two Lists starting at index 1
 curl 'https://api.salesforceiq.com/v2/lists?_start=1&_limit=2'
   -X GET
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Accept: application/json'
 ```
 

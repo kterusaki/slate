@@ -6,25 +6,25 @@
 # Retrieve all Accounts in your Organization
 curl 'https://api.salesforceiq.com/v2/accounts'
   -X GET
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Accept: application/json'
 
 # Retrieve two Accounts by Ids in your Organization
 curl 'https://api.salesforceiq.com/v2/accounts?_ids=56abd666e4b07f4066b7bcdc, 56b3acf5e4b0a8f6a0711488'
   -X GET
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Accept: application/json'
 
 # Retrieve all Accounts where modifiedDate > 1456874990000
 curl 'https://api.salesforceiq.com/v2/accounts?modifiedDate=1456874990000'
   -X GET
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Accept: application/json' 
 
 # Retrieve two Accounts starting at index 1 
 curl 'https://api.salesforceiq.com/v2/accounts?_start=1&_limit=2'
   -X GET
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Accept: application/json' 
 ```
 

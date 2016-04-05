@@ -5,7 +5,7 @@
 ```shell
 curl 'https://api.salesforceiq.com/v2/accounts/568ed01fe4b0b69244577452'
   -X PUT
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Content-Type: application/json'
   -H 'Accept: application/json'
   -d '{

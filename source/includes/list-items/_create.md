@@ -6,7 +6,7 @@
 # Contact-based List
 curl 'https://api.salesforceiq.com/v2/lists/56f087b0e4b0584aa39fbba8/listitems'
   -X POST
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Content-Type: application/json'
   -H 'Accept: application/json'
   -d '{
@@ -25,7 +25,7 @@ curl 'https://api.salesforceiq.com/v2/lists/56f087b0e4b0584aa39fbba8/listitems'
 # Account-based List
 curl 'https://api.salesforceiq.com/v2/lists/56f087b0e4b0584aa39fbba8/listitems'
   -X POST
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Content-Type: application/json'
   -H 'Accept: application/json'
   -d '{

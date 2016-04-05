@@ -5,7 +5,7 @@
 ```shell
 curl 'https://api.salesforceiq.com/v2/lists/56f087b0e4b0584aa39fbba8/listitems/56f1b645e4b0d37eabea22b0'
   -X DELETE
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
 ```
 
 > Response

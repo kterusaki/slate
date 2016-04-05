@@ -6,7 +6,7 @@
 # Upsert a List Item by contactIds
 curl 'https://api.salesforceiq.com/v2/lists/56f087b0e4b0584aa39fbba8/listitems?_upsert=contactIds'
   -X POST
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Content-Type: application/json'
   -H 'Accept: application/json'
   -d '{
@@ -20,7 +20,7 @@ curl 'https://api.salesforceiq.com/v2/lists/56f087b0e4b0584aa39fbba8/listitems?_
 # Upsert a List Item by accountId
 curl 'https://api.salesforceiq.com/v2/lists/56f1b185e4b0d37eabe8c2b0/listitems?_upsert=accountId'
   -X POST
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Content-Type: application/json'
   -H 'Accept: application/json'
   -d '{

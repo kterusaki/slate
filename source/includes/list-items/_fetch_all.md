@@ -6,37 +6,37 @@
 # Request all List Items on a List
 curl 'https://api.salesforceiq.com/v2/lists/56f087b0e4b0584aa39fbba8/listitems'
   -X GET
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Content-Type: application/json'
 
 # Request a set of List Items on a List based on an array of Ids
 curl 'https://api.salesforceiq.com/v2/lists/56f087b0e4b0584aa39fbba8/listitems?_ids=56f1dcefe4b047357c2c03e6,56f1b645e4b0d37eabea22b0'
   -X GET
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Content-Type: application/json'
 
 # Request all List Items modified after 1458691311848
 curl 'https://api.salesforceiq.com/v2/lists/56f087b0e4b0584aa39fbba8/listitems?modifiedDate=1458691311848'
   -X GET
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Content-Type: application/json'
 
 # Request two List Items starting at index 1
 curl 'https://api.salesforceiq.com/v2/lists/56f087b0e4b0584aa39fbba8/listitems?_start=1&_limit=2'
   -X GET
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Content-Type: application/json'
 
 # Request all List Items by contactIds (Account-based List)
 curl 'https://api.salesforceiq.com/v2/lists/56f1b185e4b0d37eabe8c2b0/listitems?contactIds=56b12644e4b08b67fd722d75'
   -X GET
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Content-Type: application/json'
 
 # Request all List Items by accountIds (Account-based List)
 curl 'https://api.salesforceiq.com/v2/lists/56f1b185e4b0d37eabe8c2b0/listitems?accountIds=56abd666e4b07f4066b7bcdc'
   -X GET
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Content-Type: application/json'
 ```
 

@@ -5,7 +5,7 @@
 ```shell
 curl "http://api.salesforceiq.com/v2/accounts"
   -X POST
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Content-Type: application/json'
   -H 'Accept: application/json'
   -d '{ 
@@ -23,7 +23,7 @@ curl "http://api.salesforceiq.com/v2/accounts"
             { "raw": "1" } 
           ]
         }
-      }
+      }'
 ```
 
 ```ruby 

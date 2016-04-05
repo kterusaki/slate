@@ -6,25 +6,25 @@
 # Retrieve all Contacts in your Organization
 curl 'https://api.salesforceiq.com/v2/contacts'
   -X GET
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Accept: application/json'
 
 # Retrive two Contacts by Ids in your Organization
 curl 'https://api.salesforceiq.com/v2/contacts?_ids=56b12644e4b08b67fd722d75, 56df75a4e4b03009e48e8e76'
   -X GET
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Accept: application/json'
 
 # Retrieve all Contacts where modifiedDate > 1458165069813
 curl 'https://api.salesforceiq.com/v2/contacts?modifiedDate=1458165069813'
   -X GET
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Accept: application/json'
 
 # Retrieve two Contacts starting at index 1
 curl 'https://api.salesforceiq.com/v2/contacts?_start=1&limit=2'
   -X GET
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Accept: application/json'
 
 ```

@@ -5,7 +5,7 @@
 ```shell
 curl 'https://api.salesforceiq.com/v2/lists/56f087b0e4b0584aa39fbba8'
   -X GET
-  -u [API Key]:[API Secret]
+  -u $API_KEY:$API_SECRET
   -H 'Accept: application/json'
 ```
 
