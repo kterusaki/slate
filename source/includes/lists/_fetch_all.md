@@ -20,6 +20,7 @@ curl 'https://api.salesforceiq.com/v2/lists?_start=1&_limit=2'
 
 ```shell
 # Retrieve all Lists in your Organization
+HTTP/1.1 200 OK
 {
   "objects": [
     {
@@ -401,6 +402,7 @@ curl 'https://api.salesforceiq.com/v2/lists?_start=1&_limit=2'
 }
 
 # Retrieve two Lists starting at index 1
+HTTP/1.1 200 OK
 { 
   "objects": [
     {

@@ -2,7 +2,7 @@
 
 A List is an object that can be created and customized by a User to represent Accounts (companies) or Contacts (people) in a process (such as a sales pipeline). Each list has various Fields (columns) associated with them. 
 
-A List Item is a relationship within your lists and represented as a row in your SalesforceIQ list. Each List Item has values associated with the Fields (columns) called Field Values. For more information about List Items, go to this [section](#list-items).
+A List Item is a relationship within your lists and are represented as a row in your SalesforceIQ list. Each List Item has values associated with the Fields (columns) called Field Values. For more information about List Items, go to this [section](#list-items).
 
 A List can either be a Contact-based List or an Account-based List, but not both. Account-based Lists may have multiple Contacts (Points of Contact) associated with each List Item. Contact-based Lists may only have one Contact associated with each List Item.
 

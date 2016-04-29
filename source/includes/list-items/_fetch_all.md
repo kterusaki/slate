@@ -44,6 +44,7 @@ curl 'https://api.salesforceiq.com/v2/lists/56f1b185e4b0d37eabe8c2b0/listitems?a
 
 ```shell
 # Request all List Items on a List
+HTTP/1.1 200 OK
 {
   "totalSize": 0,
   "offset": 0,
@@ -129,6 +130,7 @@ curl 'https://api.salesforceiq.com/v2/lists/56f1b185e4b0d37eabe8c2b0/listitems?a
 }
 
 # Request a set of List Items on a Listbased on an array of Ids
+HTTP/1.1 200 OK
 {
   "totalSize": 2,
   "offset": 0,
@@ -192,6 +194,7 @@ curl 'https://api.salesforceiq.com/v2/lists/56f1b185e4b0d37eabe8c2b0/listitems?a
 }
 
 # Request all List Items modified after 1458691311848
+HTTP/1.1 200 OK
 {
   "totalSize": 3,
   "offset": 0,
@@ -232,6 +235,7 @@ curl 'https://api.salesforceiq.com/v2/lists/56f1b185e4b0d37eabe8c2b0/listitems?a
 }
 
 # Request two List Items starting at index 1
+HTTP/1.1 200 OK
 {
   "totalSize": 0,
   "offset": 0,
@@ -294,6 +298,7 @@ curl 'https://api.salesforceiq.com/v2/lists/56f1b185e4b0d37eabe8c2b0/listitems?a
 }
 
 # Request all List Items (Account-based Lists) by contactIds
+HTTP/1.1 200 OK
 {
   "totalSize": 1,
   "offset": 0,
@@ -326,6 +331,7 @@ curl 'https://api.salesforceiq.com/v2/lists/56f1b185e4b0d37eabe8c2b0/listitems?a
 }
 
 # Request all List Items by accountIds (Account-based List)
+HTTP/1.1 200 OK
 {
   "totalSize": 1,
   "offset": 0,

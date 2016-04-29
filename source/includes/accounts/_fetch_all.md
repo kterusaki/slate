@@ -3,7 +3,7 @@
 > Request
 
 ```shell
-# Retrieve all Accounts in your Organization
+# Retrieve the first 50 Account ins your Organization
 curl 'https://api.salesforceiq.com/v2/accounts'
   -X GET
   -u $API_KEY:$API_SECRET
@@ -33,7 +33,7 @@ require 'riq'
 
 RIQ.init(ENV['API_KEY'], ENV['API_SECRET'])
 
-# Retrieve all Accounts in your Organization
+# Retrieve the first 50 Account ins your Organization
 RIQ.accounts.each do |a|
   puts a.data
 end
@@ -63,7 +63,7 @@ from relateiq.accounts import Account
 
 RelateIQ("[API Key]", "[API Secret]")
 
-# Retrieve all Accounts in your Organization
+# Retrieve the first 50 Account ins your Organization
 account = Account()
 print account.fetchPage()
 
@@ -152,6 +152,7 @@ HTTP/1.1 200 OK
 }
 
 # Two Accounts by Ids in your Organization
+HTTP/1.1 200 OK
 {
   "objects": [
     {
@@ -195,6 +196,7 @@ HTTP/1.1 200 OK
 }
 
 # All Accounts where modifiedDate > 1456874990000
+HTTP/1.1 200 OK
 {
   "objects": [
     {
@@ -241,6 +243,7 @@ HTTP/1.1 200 OK
 }
 
 # Two accounts starting from index 1 of all Accounts
+HTTP/1.1 200 OK
 {
   "objects": [
     {

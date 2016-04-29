@@ -11,7 +11,7 @@ curl "http://api.salesforceiq.com/v2/accounts"
   -d '{ 
         "name": "Avocado, Inc.",
         "fieldValues": { 
-          "address": [ { "raw": "502 Emersont St, Palo Alto, CA 94301" } ],
+          "address": [ { "raw": "502 Emerson St, Palo Alto, CA 94301" } ],
           "primary_contact": [{"raw": "56b11a80e4b0b5663a53403e@Cecilia Avocado"}],
           "2": [ { "raw": "CEO" } ],
           "6": [ { "raw": "jmcsales@sales.com" } ],
@@ -33,7 +33,7 @@ RIQ.init(ENV['API_KEY'], ENV['API_SECRET'])
 
 a = RIQ.account
 a.name = 'Avocado, Inc.'
-a.field_value('address', '502 Emersont St, Palo Alto, CA 94301')
+a.field_value('address', '502 Emerson St, Palo Alto, CA 94301')
 a.field_value('primary_contact', 'c.avacado@avocado.com')
 a.field_value(2, 'CEO')
 a.field_value(6, 'jmcsales@sales.com')
@@ -66,7 +66,7 @@ HTTP/1.1 200 OK
   "id": "56abd666e4b07f4066b7bcdc",
   "name": "Avocado, Inc.",
   "fieldValues": { 
-    "address": [ { "raw": "502 Emersont St, Palo Alto, CA 94301" } ],
+    "address": [ { "raw": "502 Emerson St, Palo Alto, CA 94301" } ],
     "primary_contact": [{"raw": "56b11a80e4b0b5663a53403e@Cecilia Avocado"}],
     "2": [ { "raw": "CEO" } ],
     "6": [ { "raw": "jmcsales@sales.com" } ],
@@ -109,7 +109,7 @@ HTTP/1.1 200 OK
 
 A POST request which creates a new Account object and returns the created Account with its new unique ID.
 
-If you create a new account through the API it will only create new Accounts for unique names.
+The API will de-dupe any Accounts by name. In other words, if you attempt to POST with an Account name that already exists in your SalesforceIQ Instance, the request will update field values on the existing Account with any new data that you're passing in your POST, but will not create a new new Account
 
 ### Payload
 Parameter | Type | Description
@@ -120,3 +120,4 @@ newAccount | Object (required) | A JSON representation of an Account, without th
 Parameter | Type | Description
 --------- | ------- | -----------
 name | String (required) | The name of the Account to be created.
+fieldValues | Object | A collection of values for Account Property objects. For details about saving account propery data, see [that section](#account-properties).

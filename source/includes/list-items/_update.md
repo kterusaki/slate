@@ -33,6 +33,7 @@ curl 'https://api.salesforceiq.com/v2/lists/56f1b185e4b0d37eabe8c2b0/listitems/5
 
 ```shell
 # Updating a List Item (Contact-based List)
+HTTP/1.1 200 OK
 {
   "id": "56f1b645e4b0d37eabea22b0",
   "listId": "56f087b0e4b0584aa39fbba8",
@@ -60,6 +61,7 @@ curl 'https://api.salesforceiq.com/v2/lists/56f1b185e4b0d37eabe8c2b0/listitems/5
 }
 
 # Updating a List Item (Account-based List)
+HTTP/1.1 200 OK
 {
   "id": "56f1b20ee4b0d37eabe8e15f",
   "listId": "56f1b185e4b0d37eabe8c2b0",

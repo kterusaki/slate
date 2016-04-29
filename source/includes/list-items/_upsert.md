@@ -35,6 +35,7 @@ curl 'https://api.salesforceiq.com/v2/lists/56f1b185e4b0d37eabe8c2b0/listitems?_
 
 ```shell
 # Upserted List Item by contactIds
+HTTP/1.1 200 OK
 {
   "id": "56f99519e4b0c3f938097ceb",
   "listId": "56f1b185e4b0d37eabe8c2b0",
@@ -58,6 +59,7 @@ curl 'https://api.salesforceiq.com/v2/lists/56f1b185e4b0d37eabe8c2b0/listitems?_
 }
 
 # Upserted List Item by accountId
+HTTP/1.1 200 OK
 {
   "id": "56f1b20ee4b0d37eabe8e15f",
   "listId": "56f1b185e4b0d37eabe8c2b0",

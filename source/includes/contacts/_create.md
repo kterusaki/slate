@@ -88,6 +88,7 @@ puts contact.phone
 >Response
 
 ```shell
+HTTP/1.1 200 OK
 {
   "id": "56b12644e4b08b67fd722d75",
   "modifiedDate": 1457564297403,
@@ -203,3 +204,8 @@ A POST request which creates a new Contact object and returns the created Contac
 Parameter | Type | Description
 --------- | ------- | -----------
 newContact | Object (required) | A JSON representation of a Contact, without the id or modifiedDate fields (which will be generated on creation).
+
+### Payload Attributes
+Parameter | Type | Description
+--------- | ------- | -----------
+properties | Object | A collection of Contact properties that include name, email, phone, address, company, tite, experience, liurl (LinkedIn url), twhan (Twitter handle) for a Contact object.

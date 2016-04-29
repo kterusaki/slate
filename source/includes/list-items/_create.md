@@ -49,6 +49,7 @@ curl 'https://api.salesforceiq.com/v2/lists/56f087b0e4b0584aa39fbba8/listitems'
 
 ```shell
 # Contact-based List
+HTTP/1.1 200 OK
 {
   "id": "56f1dcefe4b047357c2c03e6",
   "listId": "56f087b0e4b0584aa39fbba8",
@@ -79,6 +80,7 @@ curl 'https://api.salesforceiq.com/v2/lists/56f087b0e4b0584aa39fbba8/listitems'
 }
 
 # Account-based List
+HTTP/1.1 200 OK
 {
   "id": "56f1db4be4b0336869dce48f",
   "listId": "56f1b185e4b0d37eabe8c2b0",

@@ -12,6 +12,7 @@ curl 'https://api.salesforceiq.com/v2/lists/56f087b0e4b0584aa39fbba8/listitems/5
 > Response
 
 ```shell
+HTTP/1.1 200 OK
 {
   "id": "56f1dcefe4b047357c2c03e6",
   "listId": "56f087b0e4b0584aa39fbba8",

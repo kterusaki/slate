@@ -84,4 +84,4 @@ A GET request which pulls a specific Account by ID. Accounts can only be queried
 ### Query Parameters
 Parameter | Type | Description
 --------- | ------- | -----------
-id | String (required) | UUID of the Contact to be fetched.
+id | String (required) | UUID of the Account to be fetched.

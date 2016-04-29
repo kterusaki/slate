@@ -50,6 +50,8 @@ curl 'https://api.salesforceiq.com/v2/contacts?_upsert=rdreesen@gmail.com'
       }'
 ```
 
+```shell
+HTTP/1.1 200 OK
 {
   "id": "56e9d27de4b0b397dfa971cb",
   "properties": {
@@ -90,8 +92,11 @@ curl 'https://api.salesforceiq.com/v2/contacts?_upsert=rdreesen@gmail.com'
     ]
   }
 }
+```
 
-`POST /contacts
+`POST /contacts`
+
+A POST request which creates or updates a Contact object. 
 
 ### Query Parameters
 Parameter | Type | Description
@@ -102,3 +107,8 @@ _upsert | Text (required) | The only value this parameter may have is "email".
 Parameter | Type | Description
 --------- | ------- | -----------
 updatedContact | JSON | A full Contact object including any updated Contact data should be included in the body of the request.
+
+### Payload Attributes
+Parameter | Type | Description
+--------- | ------- | -----------
+properties | Object | A collection of Contact properties that include name, email, phone, address, company, tite, experience, liurl (LinkedIn url), twhan (Twitter handle) for a Contact object.

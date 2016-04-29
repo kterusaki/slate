@@ -72,9 +72,10 @@ id | String (required) | The unique identifier for the Contact to be updated.
 ### Payload
 Parameter | Type | Description
 --------- | ------- | -----------
-updatedContact | Object | A JSON representation of a Contact object including any updated Contact data should be included in the body of the request. The id attribute is required in the Contact object.
+updatedContact | Object | A Contact object which includes only the properties that need to be updated. This object should be included in the body of the request.
 
 ### Payload Attributes
 Parameter | Type | Description
 --------- | ------- | -----------
 id | String (required) | UUID of the Contact to be updated.
+properties | Object | A collection of Contact properties that include name, email, phone, address, company, tite, experience, liurl (LinkedIn url), twhan (Twitter handle) for a Contact object.

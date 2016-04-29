@@ -20,6 +20,7 @@ TBD
 > Response
 
 ```shell
+HTTP/1.1 200 OK
 {
   "id": "56b12644e4b08b67fd722d75",
   "modifiedDate": 1457564297403,

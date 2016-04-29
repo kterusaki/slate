@@ -27,6 +27,17 @@ curl 'https://api.salesforceiq.com/v2/contacts?_start=1&limit=2'
   -u $API_KEY:$API_SECRET
   -H 'Accept: application/json'
 
+# Retrieve Contacts by email address
+curl 'https://api.salesforceiq.com/v2/contacts?properties.email="c.avocado@avocado.com"
+  -X GET
+  -u $API_KEY:$API_SECRET
+  -H 'Accept: application/json'
+
+# Retrieve Contacts by phone number
+curl 'https://api.salesforceiq.com/v2/contacts?properties.phone="14152990341"
+  -X GET
+  -u $API_KEY:$API_SECRET
+  -H 'Accept: application/json'
 ```
 
 ```ruby
@@ -40,8 +51,8 @@ TBD
 > Response
 
 ```shell
-
 # All Contacts in your Organization
+HTTP/1.1 200 OK
 {
   "objects": [
     {
@@ -258,6 +269,7 @@ TBD
 }
 
 # Two Contacts by Ids in your Organization
+HTTP/1.1 200 OK
 {
   "objects": [
     {
@@ -439,6 +451,7 @@ TBD
 }
 
 # All Contacts where modifiedDate > 1458165069813
+HTTP/1.1 200 OK
 {
   "objects": [
     {
@@ -529,6 +542,7 @@ TBD
 }
 
 # Two Contacts starting at index 1
+HTTP/1.1 200 OK
 {
   "objects": [    
     {
@@ -651,6 +665,200 @@ TBD
     }
   ],
   "nextPage": null
+}
+
+# Retrieve Contacts by email address
+{
+  "objects": [
+    {
+      "id": "56b12644e4b08b67fd722d75",
+      "modifiedDate": 1457564297403,
+      "requestedIds": [ "56b12644e4b08b67fd722d75" ],
+      "mergedIds": [ "56b11a80e4b0b5663a53403e" ],
+      "properties": {
+        "liurl": [ 
+          {
+            "value": "https://www.linkedin.com/in/cavocado",
+            "metadata": {}
+          }
+        ],
+        "address": [
+          {
+            "value": "117 University Ave, Palo Alto, CA 94301",
+            "metadata": {}
+          }
+        ],
+        "phone": [
+          {
+            "value": "+14152990341",
+            "metadata": {
+              "stype": "work",
+              "raw_val": "+1 415-299-0341",
+              "primary": "true"
+            }
+          },
+          {
+            "value": "+15103139867",
+            "metadata": { "raw_val": "+1 510-313-9867" }
+          }
+        ],
+        "twhan": [
+          {
+            "value": "@cavocado",
+            "metadata": {}
+          }
+        ],
+        "name": [
+          {
+            "value": "Cecilia Avocado",
+            "metadata": {}
+          }
+        ],
+        "company": [
+          {
+            "value": "Avocado, Inc.",
+            "metadata": {}
+          }
+        ],
+        "title": [
+          {
+            "value": "CEO",
+            "metadata": {}
+          }
+        ],
+        "experience": [
+          {
+            "value": "Avocado, Inc.",
+            "metadata": {
+              "company_name": "Avocado, Inc.",
+              "job_title": "CEO"
+            }
+          },
+          {
+            "value": "IQ.Tempo",
+            "metadata": {
+              "company_name": "IQ.Tempo",
+              "job_title": "VP of Sales"
+            }
+          }
+        ],
+        "email": [
+          {
+            "value": "c.avocado@gmail.com",
+            "metadata": {
+              "stype": "personal",
+              "primary": "false"
+            }
+          },
+          {
+            "value": "c.avocado@avocado.com",
+            "metadata": {
+              "stype": "work",
+              "primary": "true"
+            }
+          }
+        ]
+      },
+      "state": "ACTIVE"
+    }
+  ]
+}
+
+# Retrieve Contacts by phone number
+{
+  "objects": [
+    {
+      "id": "56b12644e4b08b67fd722d75",
+      "modifiedDate": 1457564297403,
+      "requestedIds": [ "56b12644e4b08b67fd722d75" ],
+      "mergedIds": [ "56b11a80e4b0b5663a53403e" ],
+      "properties": {
+        "liurl": [ 
+          {
+            "value": "https://www.linkedin.com/in/cavocado",
+            "metadata": {}
+          }
+        ],
+        "address": [
+          {
+            "value": "117 University Ave, Palo Alto, CA 94301",
+            "metadata": {}
+          }
+        ],
+        "phone": [
+          {
+            "value": "+14152990341",
+            "metadata": {
+              "stype": "work",
+              "raw_val": "+1 415-299-0341",
+              "primary": "true"
+            }
+          },
+          {
+            "value": "+15103139867",
+            "metadata": { "raw_val": "+1 510-313-9867" }
+          }
+        ],
+        "twhan": [
+          {
+            "value": "@cavocado",
+            "metadata": {}
+          }
+        ],
+        "name": [
+          {
+            "value": "Cecilia Avocado",
+            "metadata": {}
+          }
+        ],
+        "company": [
+          {
+            "value": "Avocado, Inc.",
+            "metadata": {}
+          }
+        ],
+        "title": [
+          {
+            "value": "CEO",
+            "metadata": {}
+          }
+        ],
+        "experience": [
+          {
+            "value": "Avocado, Inc.",
+            "metadata": {
+              "company_name": "Avocado, Inc.",
+              "job_title": "CEO"
+            }
+          },
+          {
+            "value": "IQ.Tempo",
+            "metadata": {
+              "company_name": "IQ.Tempo",
+              "job_title": "VP of Sales"
+            }
+          }
+        ],
+        "email": [
+          {
+            "value": "c.avocado@gmail.com",
+            "metadata": {
+              "stype": "personal",
+              "primary": "false"
+            }
+          },
+          {
+            "value": "c.avocado@avocado.com",
+            "metadata": {
+              "stype": "work",
+              "primary": "true"
+            }
+          }
+        ]
+      },
+      "state": "ACTIVE"
+    }
+  ]
 }
 ```
 

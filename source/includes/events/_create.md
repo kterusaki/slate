@@ -28,6 +28,7 @@ curl 'https://api.salesforceiq.com/v2/events'
 
 ```shell
 # Nothing
+HTTP/1.1 200 OK
 ```
 `PUT /events`
 

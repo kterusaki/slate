@@ -1,8 +1,8 @@
 # Accounts
 
-Accounts in SalesforceIQ represent companies. Accounts can have any kind of relationship with your Organization - they could be leads, clients, former clients, or partners of your company.
+Accounts in SalesforceIQ generally represent companies or groups of people. Accounts can have any kind of relationship with your Organization - they could be leads, clients, former clients, or partners of your company.
 
-The API can access all of your Organization’s Accounts, and all Accounts created by the API are shared with your entire Organization. If you are trying to create an Account within a List please refer to the [List Items (Relationship) API endpoint](#list-items).
+The API can access all of your Organization’s Accounts, and all Accounts created by the API can be seen by your entire Organization. If you are trying to create an Account within a List please refer to the [List Items (Relationship) API endpoint](#list-items).
 
 ## Account Object
 
@@ -56,6 +56,6 @@ The API can access all of your Organization’s Accounts, and all Accounts creat
 Parameter | Type | Description
 --- | --- | ---
 id | String | UUID, created by the system
-modifiedDate | Numeric | milliseconds since (UTC) epoch
+modifiedDate | Numeric | When the Account was last edited, measured in milliseconds since (UTC) the epoch
 name | String | Account name as it will appear in SalesforceIQ
-fieldValues | Object | A collection of values for Account Property objects. For details about saving account propery data, see [that section](#account-properties).
+fieldValues | Object | A collection of values for Account Property objects. For details about saving account property data, reference our in-depth explanation of [account properties](#account-properties).

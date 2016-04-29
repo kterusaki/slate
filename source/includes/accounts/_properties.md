@@ -28,6 +28,7 @@ print response['fields']
 > Response
 
 ```shell
+HTTP/1.1 200 OK
 {
   "fields": [
     {
@@ -358,4 +359,4 @@ Account properties are custom properties that your organization's admin creates 
 
 A GET request which fetches metadata information of the Account Property fields.
 
-When updating Accounts, use this endpoint to find the relevant ids associated with specific account properties you would like to update.
+When updating fieldValues on Accounts, make sure to use this endpoint first to programmatically pull back a mapping between the user defined field names and the field ids for Account Properties. You will need to use this map when passing fieldValue changes to the Accounts endpoint.
