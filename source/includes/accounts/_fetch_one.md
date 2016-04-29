@@ -77,6 +77,7 @@ HTTP/1.1 200 OK
   "name" : "Avocado, Inc."
 }
 ```
+
 `GET /accounts/{id}`
 
 A GET request which pulls a specific Account by ID. Accounts can only be queried by Account ID.
