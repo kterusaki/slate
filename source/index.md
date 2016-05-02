@@ -35,6 +35,7 @@ includes:
   - contacts/fetch_all
   - contacts/fetch_one
   - contacts/update
+  - contacts/upsert
   - contacts/delete
   - events/objects
   - events/create

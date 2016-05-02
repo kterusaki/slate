@@ -190,6 +190,6 @@ curl 'https://api.salesforceiq.com/v2/lists/56f087b0e4b0584aa39fbba8'
 A GET request which fetches a single List by its unique identifier.
 
 ### Query Parameters
-Parameter | Type | Description
---------- | ------- | -----------
-id | String (required) | UUID for the List to be fetched.
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+id | String | true | UUID for the List to be fetched.

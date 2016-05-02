@@ -83,6 +83,6 @@ HTTP/1.1 200 OK
 A GET request which pulls a specific Account by ID. Accounts can only be queried by Account ID.
 
 ### Query Parameters
-Parameter | Type | Description
---------- | ------- | -----------
-id | String (required) | UUID of the Account to be fetched.
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+id | String | true | UUID of the Account to be fetched.

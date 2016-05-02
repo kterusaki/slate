@@ -110,12 +110,12 @@ A POST request which creates a new List Item object and returns the created List
 For Contact-based Lists, at least one contactId is required.
 
 ### Query Parameters
-Parameter | Type | Description
---------- | ------- | -----------
-listId | String (required) | The unique identifier for the List to be fetched.
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+listId | String | true | The unique identifier for the List where the List Item should be created.
 
 
 ### Payload
-Parameter | Type | Description
---------- | ------- | -----------
-newListItem | Object (required) | A JSON representation of a List Item, without the id, modifiedDate, or createdDate fields (which will be generated on creation).
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+newListItem | Object | true | A JSON representation of a List Item, without the id, modifiedDate, or createdDate fields (which will be generated on creation).

@@ -126,6 +126,6 @@ TBD
 A GET request which pulls a specific Contact by ID. Contacts can only be queried by Contact ID.
 
 ### Query Parameters
-Parameter | Type | Description
---------- | ------- | -----------
-id | Text (required) | The unique identifier for the Account to be fetched.
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+id | String | true | The unique identifier for the Account to be fetched.

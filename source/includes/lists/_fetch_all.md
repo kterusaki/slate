@@ -616,8 +616,8 @@ HTTP/1.1 200 OK
 Retrieve a paginated collection of all Lists in your Organization.
 
 ### Query Parameters
-Parameter | Type | Description
---------- | ------- | -----------
-_ids | String[] | An optional, comma separated list of List identifiers.
-_start | Numeric | An optional starting point for the returned page of records (defaults to 0). If you start at 5 you will retrieve records starting at the index 6 to your _limit.
-_limit | Numeric | An optional page size for the returned result (defaults to 50, max size is 200).
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+_ids | String[] | false | An optional, comma separated list of List identifiers.
+_start | Numeric | false | An optional starting point for the returned page of records (defaults to 0). If you start at 5 you will retrieve records starting at the index 6 to your _limit.
+_limit | Numeric | false | An optional page size for the returned result (defaults to 50, max size is 200).

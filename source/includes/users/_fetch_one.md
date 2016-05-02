@@ -22,6 +22,6 @@ HTTP/1.1 200 OK
 `GET /users`
 
 ### Query Parameters
-Parameter | Type | Description
---------- | ------- | -----------
-id | String (required) | UUID for the User to be fetched.
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+id | String | true | UUID for the User to be fetched.

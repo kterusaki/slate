@@ -21,6 +21,6 @@ A DELETE request which removes an Account from the Organization and returns true
 The request will fail if the Account is associated with a List Item.
 
 ### Query Parameters
-Parameter | Type | Description
---------- | ------- | -----------
-id | String (required) | UUID for the Account to be deleted.
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+id | String | true | UUID for the Account to be deleted.

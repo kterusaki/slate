@@ -71,18 +71,18 @@ HTTP/1.1 200 OK
 A PUT request which updates the details of a specific Account. The id and name are required keys in the body.
 
 ### Query Parameters
-Parameter | Type | Description
---------- | ------- | -----------
-id | String (required) | The unique identifier for the Account to be updated.
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+id | String | true | The unique identifier for the Account to be updated.
 
 ### Payload
-Parameter | Type | Description
---------- | ------- | -----------
-updatedAccount | Object (required) | An Account object which includes only the fieldValues that need to be updated. This object should be included in the body of the request.
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+updatedAccount | Object | true | An Account object which includes only the fieldValues that need to be updated. This object should be included in the body of the request.
 
 ### Payload Attributes
-Parameter | Type | Description
---------- | ------- | -----------
-id | String (required) | UUID of the Account to be updated.
-name | String (required) | The existing or updated name of the Account.
-fieldValues | Object | A collection of values for Account Property objects. For details about saving account property data, reference our in-depth explanation of [account properties](#account-properties).
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+id | String | true | UUID of the Account to be updated.
+name | String | true | The existing or updated name of the Account.
+fieldValues | Object | false | A collection of values for Account Property objects. For details about saving account property data, reference our in-depth explanation of [account properties](#account-properties).

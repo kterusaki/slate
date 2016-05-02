@@ -189,9 +189,9 @@ HTTP/1.1 200 OK
 This endpoint fetches all Accounts. Responses are paginated, max of 200 at a time.
 
 ### Query Parameters
-Parameter | Type | Description
---------- | ------- | -----------
-_ids | String[] | An optional, comma separated list of Account identifiers.
-_start | Numeric | An optional starting point for the returned page of records (defaults to 0). If you start at 50 you will retrieve records starting at the index 51 to your _limit.
-_limit | Numeric | An optional page size for the returned result (defaults to 50, max size is 200).
-modifiedDate | Numeric | Fetch all accounts modified at or after this timestamp (in milliseconds since epoch).
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+_ids | String[] | false | An optional, comma separated list of Account identifiers.
+_start | Numeric | false | An optional starting point for the returned page of records (defaults to 0). If you start at 50 you will retrieve records starting at the index 51 to your _limit.
+_limit | Numeric | false | An optional page size for the returned result (defaults to 50, max size is 200).
+modifiedDate | Numeric | false | Fetch all accounts modified at or after this timestamp (in milliseconds since epoch).

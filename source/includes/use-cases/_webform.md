@@ -13,14 +13,14 @@ Let’s say the “contact us” form collects the following information:
 
 To represent this new lead, you would want to take the following steps:
 
-__Use the Contact service to create a new Contact with the “name,” “email,” and ‘“phone” fields__
-You can add multiple emails or phone numbers if relevant. You don’t need to check for an existing duplicate Contact — SalesforceIQ will automatically associate duplicate Contacts with each other based on the rules mentioned in the [Contact section](#contacts), and will keep all information in both Contact entries. The Contact service will provide an ID for the new Contact.
+__Use the Contact endpoint to create a new Contact with the “name,” “email,” and ‘“phone” fields__
+You can add multiple emails or phone numbers if relevant. You don’t need to check for an existing duplicate Contact — SalesforceIQ will automatically associate duplicate Contacts with each other based on the rules mentioned in the [Contact section](#contacts), and will keep all information in both Contact entries. The Contact endpoint will provide an ID for the new Contact.
 
-__Use the Account service to create a new Account with the “Company name” as the name and “address” as the address__
-You don’t need to check for an existing duplicate Account — SalesforceIQ will automatically associate duplicate Accounts with each other based on name, and will keep all information in both Contact entries. The Account service will return an ID for the new Account.
+__Use the Account edpoint to create a new Account with the “Company name” as the name and “address” as the address__
+You don’t need to check for an existing duplicate Account — SalesforceIQ will automatically associate duplicate Accounts with each other based on name, and will keep all information in both Contact entries. The Account endpoint will return an ID for the new Account.
 
 __Create a new List Item in an existing List__
-Make sure the API has access to this List; if you can’t see it through the List service, you will need to ask the List administrator for access.
+Make sure the API has access to this List; if you can’t see it through the List endpoint, you will need to ask the List administrator for access.
 
 For this example, let’s say the List you are updating is called “Leads.” Let’s assume this is an “Account” type List and has the following schema:
 

@@ -21,6 +21,6 @@ A DELETE request which *archives* a Contact and returns true or false as to whet
 The request will fail if the Contact is associated with a List Item.
 
 ### Query Parameters
-Parameter | Type | Description
---------- | ------- | -----------
-id | String (required) | UUID for the Contact to be deleted.
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+id | String | true | UUID for the Contact to be deleted.

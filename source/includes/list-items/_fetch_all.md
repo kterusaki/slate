@@ -133,12 +133,11 @@ HTTP/1.1 200 OK
 Fetches a paginated collection of all of Items on a specified List.
 
 ### Query Parameters
-Parameter | Type | Description
---------- | ------- | -----------
-listId | String (required) | The unique identifier for the List to be fetched.
-_ids | String[] | An optional, comma separated list of List Item identifiers.
-_start | Numeric | An optional starting point for the returned page of records (defaults to 0).
-_limit | Numeric | An optional page size for the returned result (defaults to 50, max size is 200).
-modifiedDate | Numeric | Fetch all List Items modified at or after this timestamp (in milliseconds since epoch).
-contactIds | String[] | An optional, comma separated list of contact identifiers.
-accountIds | String[] | An optional, comma separated list of account identifiers. 
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+_ids | String[] | false | An optional, comma separated list of List Item identifiers.
+_start | Numeric | false | An optional starting point for the returned page of records (defaults to 0).
+_limit | Numeric | false | An optional page size for the returned result (defaults to 50, max size is 200).
+modifiedDate | Numeric | false |Fetch all List Items modified at or after this timestamp (in milliseconds since epoch).
+contactIds | String[] | false | An optional, comma separated list of contact identifiers.
+accountIds | String[] | false | An optional, comma separated list of account identifiers. 

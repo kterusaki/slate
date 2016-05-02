@@ -20,7 +20,7 @@ true
 A DELETE request which removes a Item from an List and returns true or false as to whether the deletion completed successfully.
 
 ### Query Parameters
-Parameter | Type | Description
---------- | ------- | -----------
-listId | String (required) | UUID for the List to be fetched.
-listItemId | String (required) | UUID for the List Item to be updated.
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+listId | String | true | UUID for the List to be fetched.
+listItemId | String | true | UUID for the List Item to be updated.

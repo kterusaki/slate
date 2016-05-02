@@ -112,12 +112,12 @@ A POST request which creates a new Account object and returns the created Accoun
 The API will de-dupe any Accounts by name. In other words, if you attempt to POST with an Account name that already exists in your SalesforceIQ Instance, the request will update field values on the existing Account with any new data that you're passing in your POST, but will not create a new new Account
 
 ### Payload
-Parameter | Type | Description
---------- | ------- | -----------
-newAccount | Object (required) | A JSON representation of an Account, without the id or modifiedDate fields (which will be generated on creation).
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+newAccount | Object | true | A JSON representation of an Account, without the id or modifiedDate fields (which will be generated on creation).
 
 ### Payload Attributes
-Parameter | Type | Description
---------- | ------- | -----------
-name | String (required) | The name of the Account to be created.
-fieldValues | Object | A collection of values for Account Property objects. For details about saving account propery data, see [that section](#account-properties).
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+name | String | true | The name of the Account to be created.
+fieldValues | Object | false | A collection of values for Account Property objects. For details about saving account propery data, see [that section](#account-properties).

@@ -35,13 +35,13 @@ HTTP/1.1 200 OK
 A PUT request which creates a new Event and begins propogating the details out to associated streams.
 
 ### Payload
-Parameter | Type | Description
---------- | ------- | -----------
-newEvent | Object (required) | A JSON representation of an Event
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+newEvent | Object | true | A JSON representation of an Event
 
 ### Payload Attributes
-Parameter | Type | Description
---------- | ------- | -----------
-subject | String (required) | The subject or title of the event
-body | String (required) | The body of the event
-participantIds | Object\[\] (required) | A collection of Contact emails or phone numbers
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+subject | String | true | The subject or title of the event
+body | String | true | The body of the event
+participantIds | Object\[\] | true | A collection of Contact emails or phone numbers

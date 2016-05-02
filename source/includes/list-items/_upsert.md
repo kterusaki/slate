@@ -81,24 +81,27 @@ HTTP/1.1 200 OK
   "linkedItemIds": {}
 }
 ```
-`POST /lists/{listId}/listitems/{listItemId}`
+`POST /lists/{listId}/listitems`
 
-A POST request which updates/inserts the details of a List Item.
+A POST request which updates/inserts the details of a List Item based on query parameters. 
+
+If the value for the query parameter _upsert is 'contactIds', then SalesforceIQ will update the List Item associated with the contactIds provided in the Payload Attributes. If no List Item is found with the provided contactId, then the system will create a new List Item.
+
+If the value for the query parameter _upsert is 'accountIds', then SalesforceIQ will update the List Item associated with the accountId provided in the Payload Attrtibutes. If no List Item is found with the provided accountId, then the system will create a new List Item.
 
 ### Query Parameters
-Parameter | Type | Description
---------- | ------- | -----------
-listId | String (required) | UUID for the List to be fetched.
-listItemId | String (required) | UUID for the List Item to be updated
-_upsert | String (required) | The String literal 'contactIds' or 'accountId'
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+listId | String | true | UUID for the List to be fetched.
+_upsert | String | true | The String literal 'contactIds' or 'accountId'
 
 ### Payload
-Parameter | Type | Description
---------- | ------- | -----------
-listItem | Object (required) | A JSON representation of a List Item, without the id, modifiedDate, or createdDate fields (which will be generated on creation).
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+listItem | Object | true | A JSON representation of a List Item, without the id, modifiedDate, or createdDate fields (which will be generated on creation).
 
 ### Payload Attributes
-Parameter | Type | Description
---------- | ------- | -----------
-accountId | String (required for upsert by accountId) | UUID for the Account of the List Item
-contactIds | String\[\] (required for upsert by contactIds) | An array of unique identifiers for the Points of Contact of an Account or a Contact
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+accountId | String | true (required for upsert by accountId) | UUID for the Account of the List Item
+contactIds | String\[\] | true (required for upsert by contactIds) | An array of unique identifiers for the Points of Contact of an Account or a Contact

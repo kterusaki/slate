@@ -1,6 +1,6 @@
 # Users
 
-Users are represented by owners and contacts in your SalesforceIQ organization. The user object consists of a name, email address, and unique identifier. The unique identifier can be queried through the API end point to return the user's name and email address for a specific contactID and userID.
+Users are individuals with login access to your SalesforceIQ organization. The user object consists of a name, email address, and unique identifier. The unique identifier can be queried through the API end point to return the user's name and email address for a specific contactID and userID.
 
 > Definition
 

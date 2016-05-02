@@ -47,7 +47,7 @@ HTTP/1.1 200 OK
 A GET request to a specified List which fetches a single List Item by it's unique identifier.
 
 ### Query Parameters
-Parameter | Type | Description
---------- | ------- | -----------
-listId | String (required) | UUID for the List to be fetched.
-listItemId | String (required) | UUID for the List Item to be fetched.
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+listId | String | true | UUID for the List to be fetched.
+listItemId | String | true | UUID for the List Item to be fetched.

@@ -90,12 +90,12 @@ A PUT request which updates the details of a specific List Item.
 Note: If you want to add a Point of Contact to a list item, you need to append the contactId to the existing contactIds array.
 
 ### Query Parameters
-Parameter | Type | Description
---------- | ------- | -----------
-listId | String (required) | UUID for the List to be fetched.
-listItemId | String (required) | UUID for the List Item to be updated
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+listId | String | true | UUID for the List to be fetched.
+listItemId | String | true | UUID for the List Item to be updated
 
 ### Payload
-Parameter | Type | Description
---------- | ------- | -----------
-listItem | Object (required) | A JSON representation of a List Item, without the id, modifiedDate, or createdDate fields (which will be generated on creation).
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+listItem | Object | true | A JSON representation of a List Item, without the id, modifiedDate, or createdDate fields (which will be generated on creation).

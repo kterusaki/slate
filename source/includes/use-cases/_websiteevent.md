@@ -9,10 +9,10 @@ Through a form on your website, the user enters the following information to reg
 - Job title
 - Areas of interest
 
-__Use the Contact service to identify an existing Contact or create a new Contact with the “name” and “email” fields.__
-You can add multiple emails if relevant. You don’t need to check for an existing duplicate Contact — SalesforceIQ will automatically associate duplicate Contacts with each other based on the rules mentioned in the [Contact section](#contacts), and will keep all information in the merged Contact. The Contact service will provide an ID for the new or existing Contact.
+__Use the Contact endpoint to identify an existing Contact or create a new Contact with the “name” and “email” fields.__
+You can add multiple emails if relevant. You don’t need to check for an existing duplicate Contact — SalesforceIQ will automatically associate duplicate Contacts with each other based on the rules mentioned in the [Contact section](#contacts), and will keep all information in the merged Contact. The Contact endpoint will provide an ID for the new or existing Contact.
 
-__Use the Event service to create a new registration Event associated with the Contact you created or identified__
+__Use the Event endpoint to create a new registration Event associated with the Contact you created or identified__
 
 Event attribute | Data entered
 --------- | -------

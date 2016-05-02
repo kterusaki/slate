@@ -201,11 +201,11 @@ TBD
 A POST request which creates a new Contact object and returns the created Contact with its new unique ID.
 
 ### Payload
-Parameter | Type | Description
---------- | ------- | -----------
-newContact | Object (required) | A JSON representation of a Contact, without the id or modifiedDate fields (which will be generated on creation).
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+newContact | Object | true | A JSON representation of a Contact, without the id or modifiedDate fields (which will be generated on creation).
 
 ### Payload Attributes
-Parameter | Type | Description
---------- | ------- | -----------
-properties | Object | A collection of Contact properties that include name, email, phone, address, company, tite, experience, liurl (LinkedIn url), twhan (Twitter handle) for a Contact object.
+Parameter | Type | Required | Description
+--------- | ---- | -------- | -----------
+properties | Object | false | A collection of Contact properties that include name, email, phone, address, company, tite, experience, liurl (LinkedIn url), twhan (Twitter handle) for a Contact object.
