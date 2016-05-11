@@ -53,18 +53,19 @@
 - [Events](#events)
 - [Users](#users)
 
-The SalesforceIQ Object Model is centered around [__Lists__](https://help.salesforceiq.com/articles/overview-lists). Lists are where you will spend the majority of your time in SalesforceIQ. A List models a business process and contains fields that you want to track for that process.
+To end users, everything in the SalesforceIQ UI is attributed to the List. The List name, list settings, the Stream and Grid View, and the relationsips/rows are all part of the List. In our backend, these components that make up a List are actually multiple objects within the system. For example, the rows on a List are actually instances of the List Item object. Accounts and Contacts are associated with those List Items and Stream Events are actually attributed to the Event Object instead of the List.
 
-There are two types of Lists that define the structure of List Items: Account-based List and Contact-based Lists. A List can either be a Contact-based List or an Account-based List, but not both. Account-based Lists may have multiple Contacts (Points of Contact) associated with each List Item. Contact-based Lists may only have one Contact associated with each List Item.
+In the API, a [__List__](#lists) contains schema that defines the types of values that a List Item can have for each column.
+There are two types of Lists that define the structure of List Items: Account-based Lists and Contact-based Lists. A List can either be a Contact-based List or an Account-based List, but not both. Account-based Lists may have multiple Contacts (Points of Contact) associated with each List Item. Contact-based Lists may only have one Contact associated with each List Item.
 
-[__List Items__](#list-items) are rows in a List. At a high level, a List Item is a Contact (person) or an Account (company) who is being tracked as part of a process defined by a List. You'll notice that on Account-based Lists, List Items reference information from two objects ([Accounts](#accounts) & [Contacts](#contacts)). Whereas List Items on Contact-based Lists reference information just from the Contact Object.
+To end users, we say that the List is where users will spend most of their time in SalesforceIQ. For the SalesforceIQ API, you will be spending most of your time handling [__List Items__](#list-items). List Items are rows on a List. At a high level, a List Item is a junction object between a [Contact](#contacts) (person) or an [Account](#accounts) (company) and a List.
 
-[Events](#events) are only tied to Contacts and will only show up in the Stream View.
+[Events](#events) are objects that represent individual touch points with a Contact(s). Default events of the system are meetings, phone calls, and emails. The event object in the API is a separate event type that appears in the Stream View based on the Contact the event is associated with. The Contact needs to be associated to a particular List Item for the Event to show up in the Stream.
 
-The [User](#users) object is referenced by List Items in Collaborator fields (Standard) like the Default Owner field.
+The [User](#users) object represents an individual user of SalesforceIQ. Users are reflected in List Items as Owners or Collaborators of a Relationship.
 
 ### What kind of information gets referenced?
-All properties found on the Account Profile or Contact Profile are referenced. These can also be surfaced on the grid by adding fields under the *Account* or *Contact* section. By linking an Account to a List Item, you're also able to reference *Company* information. Company information is automatically provided to you by our database of a million plus companies. 
+All properties found on the Account Profile or Contact Profile are referenced. These can also be surfaced on the grid by adding fields under the *Account* or *Contact* section.
 
 ### How do Accounts and Contacts get associated with List Items?
 

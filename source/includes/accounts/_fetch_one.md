@@ -48,7 +48,7 @@ HTTP/1.1 200 OK
       { "raw": "1" }
     ],
     "address": [ { "raw": "117 University Ave, Palo Alto, CA 94301" } ],
-    "primary_contact": [ { "raw": "56b11a80e4b0b5663a53403e@Cecilia Avocado" } ]
+    "primary_contact": [ { "raw": "56b11a80e4b0b5663a53403e" } ]
   }
 }
 ```
@@ -66,7 +66,7 @@ HTTP/1.1 200 OK
     :"16" => "2017-02-01",     
     :"18" => ["0", "1"], 
     :address => "117 University Ave, Palo Alto, CA 94301", 
-    :primary_contact=>"56b11a80e4b0b5663a53403e@Cecilia Avocado"
+    :primary_contact=>"56b11a80e4b0b5663a53403e"
   }
 }
 ```

@@ -12,7 +12,7 @@ curl "http://api.salesforceiq.com/v2/accounts"
         "name": "Avocado, Inc.",
         "fieldValues": { 
           "address": [ { "raw": "502 Emerson St, Palo Alto, CA 94301" } ],
-          "primary_contact": [{"raw": "56b11a80e4b0b5663a53403e@Cecilia Avocado"}],
+          "primary_contact": [{"raw": "56b11a80e4b0b5663a53403e"}],
           "2": [ { "raw": "CEO" } ],
           "6": [ { "raw": "jmcsales@sales.com" } ],
           "12": [ { "raw": "2" } ],
@@ -67,7 +67,7 @@ HTTP/1.1 200 OK
   "name": "Avocado, Inc.",
   "fieldValues": { 
     "address": [ { "raw": "502 Emerson St, Palo Alto, CA 94301" } ],
-    "primary_contact": [{"raw": "56b11a80e4b0b5663a53403e@Cecilia Avocado"}],
+    "primary_contact": [{"raw": "56b11a80e4b0b5663a53403e"}],
     "2": [ { "raw": "CEO" } ],
     "6": [ { "raw": "jmcsales@sales.com" } ],
     "12": [ { "raw": "2" } ],
@@ -94,7 +94,7 @@ HTTP/1.1 200 OK
     :"16" => "2017-02-01",     
     :"18" => ["0", "1"], 
     :address => "117 University Ave, Palo Alto, CA 94301", 
-    :primary_contact=>"56b11a80e4b0b5663a53403e@Cecilia Avocado"
+    :primary_contact=>"56b11a80e4b0b5663a53403e"
   }
 }
 ```
@@ -109,7 +109,7 @@ HTTP/1.1 200 OK
 
 A POST request which creates a new Account object and returns the created Account with its new unique ID.
 
-The API will de-dupe any Accounts by name. In other words, if you attempt to POST with an Account name that already exists in your SalesforceIQ Instance, the request will update field values on the existing Account with any new data that you're passing in your POST, but will not create a new new Account
+The API will de-dupe any Accounts by name. In other words, if you attempt to POST with an Account name that already exists in your SalesforceIQ Instance, the request will update field values on the existing Account with any new data that you're passing in your POST, but will not create a net new Account
 
 ### Payload
 Parameter | Type | Required | Description

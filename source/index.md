@@ -13,6 +13,7 @@ language_tabs:
 includes:
   - intro
   - object-model/overview
+  - object-model/datatypes
   - lists/objects
   - lists/fetch_all
   - lists/fetch_one

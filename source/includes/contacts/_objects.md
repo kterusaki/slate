@@ -1,6 +1,6 @@
 # Contacts
 
-Contacts represent people in an Organization’s address book. SalesforceIQ has two types of Contacts: private and shared. Shared Contacts are accessible by the entire Organization and can be viewed and updated by the API. If you are trying to create a Contact within a List please refer to the [List Items (Relationship) API endpoint](#list-items).
+Contacts represent people in an Organization’s address book. SalesforceIQ has two types of Contacts: private and shared. Shared Contacts are accessible by the entire Organization and can be viewed and updated by the API. If you are trying to associate a Contact within a List please refer to the [List Items (Relationship) API endpoint](#list-items).
 
 SalesforceIQ is designed to handle and merge multiple Contacts for the same person elegantly based on the Contact properties. Lets say that we have two Cecilia Avocado Contacts. Cecilia Avocado (1) has four properties A,B,C,D and Cecilia Avocado (2) has three properties A,B,C, then the two Contacts will be automatically merged to be Cecilia Avocado with properties A,B,C,D.
 

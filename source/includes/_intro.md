@@ -25,7 +25,7 @@ You'll include these with every request, either directly or through one of our s
 
 ## Requests
 
-All request use the root url of `https://api.salesforceiq.com/v2`. For each route, we support one or more of the following HTTP methods: 
+All requests use the root url of `https://api.salesforceiq.com/v2`. For each route, we support one or more of the following HTTP methods: 
 
 * `GET` retrieve one or more objects
 * `POST` create a new object
@@ -66,6 +66,6 @@ Error Code|Message|Description
 500 | Server Error | some sort of server issue
 503 | Service Unavailable | likely a deploy is occurring, wait 2 minutes and retry
 
-### Rate Limits
+## Rate Limits
 
 Each API key is limited to a certain number of requests per day. Currently, the limit is __100k requests__ per calendar day. Any further requests will return error code 429 until the next day begins.

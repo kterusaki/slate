@@ -24,7 +24,7 @@ The API can access all of your Organization’s Accounts, and all Accounts creat
       { "raw": "1" }
     ],
     "address": [ { "raw": "117 University Ave, Palo Alto, CA 94301" } ],  # Address (Location)
-    "primary_contact": [ { "raw": "56b11a80e4b0b5663a53403e@Cecilia Avocado" } ]  # Primary Contact (Contact)
+    "primary_contact": [ { "raw": "56b11a80e4b0b5663a53403e" } ]  # Primary Contact (Contact)
   }
 }
 ```
@@ -41,7 +41,7 @@ The API can access all of your Organization’s Accounts, and all Accounts creat
     :"16" => "2017-02-01",  # Contract End Date (Date)
     :"18" => ["0", "1"],  # Industry (Picklist)
     :address => "117 University Ave, Palo Alto, CA 94301", # Address (Location)
-    :primary_contact=>"56b11a80e4b0b5663a53403e@Cecilia Avocado"  # Primary Contact (Contact)
+    :primary_contact=>"56b11a80e4b0b5663a53403e"  # Primary Contact (Contact)
   }
 }
 ```
