@@ -347,13 +347,27 @@ html, body {
 
   &>ul, &>ol {
     padding-left: $main-padding + 15px;
+    a{
+      color: $link-text;
+      text-decoration: none;
+      font-weight: bold;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
   }
 
   // the div is the tocify hidden div for placeholding stuff
   &>h1, &>h2, &>div {
     clear:both;
   }
-
+  p {
+    a {
+      color: $link-text;
+      font-weight: bold;
+      &:hover{text-decoration: none;}
+    }
+  }
   h1 {
     @extend %header-font;
     font-size: 30px;
@@ -538,7 +552,9 @@ html, body {
 
     @extend %right-col;
 
-    &>p { margin: 0; }
+    &>p {
+        margin: 0;
+      }
 
     a {
       color: #fff;
