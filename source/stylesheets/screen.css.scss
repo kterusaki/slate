@@ -167,9 +167,7 @@ html, body {
 
   li {
     color: $nav-text;
-    transition-property: background;
-    transition-timing-function: linear;
-    transition-duration: 230ms;
+    transition: background linear 230ms, border linear 230ms ;
   }
 
   .tocify-hover {
