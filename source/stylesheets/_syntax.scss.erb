@@ -18,8 +18,25 @@ under the License.
 
 <%= Rouge::Themes::Base16::Monokai.render(:scope => '.highlight') %>
 
+.content code, .content pre{
+	color: #3c5468;
+	text-shadow: none;
+}
+
 .highlight .c, .highlight .cm, .highlight .c1, .highlight .cs {
-  color: #909090;
+  color: #46b9b4;
+}
+
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1{
+	color: #4d9993;
+}
+
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv, .highlight .o, .highlight .ow{
+	color: #3c5468;
+}
+
+.highlight .nt{
+	color: #008fbf;
 }
 
 .highlight, .highlight .w {

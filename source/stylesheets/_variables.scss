@@ -29,9 +29,9 @@ under the License.
 // BACKGROUND COLORS
 ////////////////////
 $nav-bg: #173e4d;
-$examples-bg: #173e4d;
-$code-bg: #173e4d;
-$code-annotation-bg: #4a5357;
+$examples-bg: #f7f8f9;
+$code-bg: #f7f8f9;
+$code-annotation-bg: #54727F;
 $nav-subitem-bg: #133340;
 $nav-active-bg: #4bc1be;
 $lang-select-border: #133340;
@@ -48,7 +48,7 @@ $search-notice-bg: #c97a7e;
 // TEXT COLORS
 ////////////////////
 $main-text: #54727f; // main content text color
-$nav-text: #557380;
+$nav-text: #718591;
 $header-text: #043d52;
 $link-text: #4bc1be;
 $nav-active-text: #fff;
@@ -96,12 +96,12 @@ $phone-width: $tablet-width - $nav-width; // min width before reverting to mobil
 
 // OTHER
 ////////////////////
-$nav-active-shadow: #000;
-$nav-footer-border-color: #666;
-$nav-embossed-border-top: #000;
-$nav-embossed-border-bottom: #939393;
+$nav-active-shadow: #318280;
+$nav-footer-border-color: #073040;
+$nav-embossed-border-top: #073040;
+$nav-embossed-border-bottom: #073040;
 $main-embossed-text-shadow: 0px 1px 0px #fff;
-$search-box-border-color: #666;
+$search-box-border-color: #54727F;
 
 
 ////////////////////////////////////////////////////////////////////////////////
