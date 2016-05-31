@@ -1,20 +1,22 @@
 $(document).ready(function() {
-  $('code').click(function() {
-    $(this).parent().toggleClass('active');
-    $(this).toggleClass('active');
+  $('code').click(function(e) {
+    if (e.offsetY > $(this)[0].offsetHeight) {
+      $(this).parent().toggleClass('active');
+      $(this).toggleClass('active');
+    }
   });
 
   addCollapsible();
+});
 
-  $(window).resize(function(i) {
-    addCollapsible();
-  });
+$(window).resize(function(i) {
+  addCollapsible();
 });
 
 function addCollapsible() {
   $('.highlight > code').each(function(i) {
     var overflowing = overflow($(this)[0].offsetHeight, $(this)[0].scrollHeight);
-    $(this).toggleClass('overflow-active', overflowing);
+    $(this).toggleClass('overflow-active', overflowing);    
   });
 }
 
