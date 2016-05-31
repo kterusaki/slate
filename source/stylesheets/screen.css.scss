@@ -98,7 +98,7 @@ html, body {
       margin: $nav-v-padding $nav-padding;
       width: $nav-width - 30;
       outline: none;
-      color: $nav-text;
+      color: $search-text;
       border-radius: 0; /* ios has a default border radius */
     }
 
@@ -167,9 +167,12 @@ html, body {
 
   li {
     color: $nav-text;
-    transition-property: background;
-    transition-timing-function: linear;
-    transition-duration: 230ms;
+    transition: background linear 230ms, border linear 230ms ;
+  }
+
+  .tocify-hover {
+    color: #fff;
+    transition: color ease 500ms;
   }
 
   // This is the currently selected ToC entry
