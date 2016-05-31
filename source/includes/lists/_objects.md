@@ -282,7 +282,7 @@ Additionally, use this endpoint to retrieve the appropriate listOption ids if yo
   ],
   "size": 0
 }
-``` 
+```
 
 Parameter | Type | Description
 --- | --- | ---

@@ -34,6 +34,7 @@ curl 'https://api.salesforceiq.com/v2/contacts/56b12644e4b08b67fd722d75'
 > Response
 
 ```shell
+HTTP/1.1 200 OK
 {
   "id": "56b12644e4b08b67fd722d75",
   "modifiedDate": 1458168762562,

@@ -279,6 +279,7 @@ html, body {
     right: 0;
     top: 0;
     bottom: 0;
+    border-left: 1px solid #ccc;
   }
 
   .lang-selector {
@@ -383,6 +384,8 @@ html, body {
   h1:first-child, div:first-child + h1 {
     border-top-width: 0;
     margin-top: 0;
+    position: relative;
+    left: -1px;
   }
 
   h2 {
@@ -475,11 +478,45 @@ html, body {
     border-radius: 3px;
     @extend %break-words;
     @extend %code-font;
+    white-space: pre-wrap;
+    overflow: hidden;
+  }
+
+  pre:nth-of-type(3) {
+    max-height: none;
+  }
+
+  pre:nth-of-type(3) code {
+    white-space: pre;    
+  }
+
+  pre:nth-of-type(3) > code {
+    max-height: none;
+    overflow: scroll;
   }
 
   pre>code {
     background-color: transparent;
     padding: 0;
+    display: inline-block;
+    max-height: 300px;
+  }
+
+  pre > code::after {
+    font-family: FontAwesome;
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    cursor: pointer;
+  }
+
+  pre > code.overflow-active:after {
+    content: "\f13a";
+  }
+
+  pre > code.active:after {
+    content: "\f139";
   }
 
   aside {
@@ -541,6 +578,11 @@ html, body {
     background-color: $code-bg;
     color: #fff;
 
+    /* My changes */
+    position: relative;
+    top: -80px;    
+    overflow: hidden;
+
     padding: 2em $main-padding;
     margin: 0;
     width: $examples-width;
@@ -566,6 +608,16 @@ html, body {
 
   pre {
     @extend %code-font;
+    margin-bottom: 5px;
+    max-height: 365px;
+  }
+
+  pre:nth-of-type(1) {
+    top: -30px;
+  }
+
+  .active {
+    max-height: none;
   }
 
   blockquote {
@@ -576,7 +628,7 @@ html, body {
       color: #fff;
       //border-top: 1px solid #000;
       //border-bottom: 1px solid #404040;
-    }
+    }    
   }
 }
 

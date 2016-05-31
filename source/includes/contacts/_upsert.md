@@ -29,6 +29,8 @@ curl 'https://api.salesforceiq.com/v2/contacts?_upsert=email'
       }'
 ```
 
+> Response
+
 ```shell
 HTTP/1.1 200 OK
 {

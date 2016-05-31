@@ -7,7 +7,7 @@ You are currently viewing examples for Curl. You can use these examples to test 
 
 Toggle examples for different languages with the selector above.
 
-Let's get your environment setup to run each curl command. In a terminal run...
+To get your environment setup to run each curl command, open a terminal and run...
 
 export API_KEY=your_api_key
 export API_SECRET=your_api_secret
