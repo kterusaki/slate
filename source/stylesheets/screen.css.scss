@@ -489,13 +489,9 @@ html, body {
     max-height: none;
   }
 
-  pre:nth-of-type(3) code {
-    white-space: pre;    
-  }
-
   pre:nth-of-type(3) > code {
     max-height: none;
-    overflow: scroll;
+    white-space: pre;
   }
 
   pre>code {
