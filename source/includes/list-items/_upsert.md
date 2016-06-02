@@ -24,11 +24,11 @@ curl 'https://api.salesforceiq.com/v2/lists/56f1b185e4b0d37eabe8c2b0/listitems?_
   -H 'Content-Type: application/json'
   -H 'Accept: application/json'
   -d '{
-        "accountId": "56abd666e4b07f4066b7bcdc"
+        "accountId": "56abd666e4b07f4066b7bcdc",
         "fieldValues": {
           "0": [ { "raw": "3" }]
         }
-      }'  
+      }'
 ```
 
 > Response

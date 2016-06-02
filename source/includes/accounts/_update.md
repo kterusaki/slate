@@ -9,7 +9,7 @@ curl 'https://api.salesforceiq.com/v2/accounts/568ed01fe4b0b69244577452'
   -H 'Content-Type: application/json'
   -H 'Accept: application/json'
   -d '{
-      "id" : "568ed01fe4b0b69244577452", // required
+      "id" : "568ed01fe4b0b69244577452",
       "name": "Jamjilla"
     }'
 ```

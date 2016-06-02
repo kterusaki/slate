@@ -3,7 +3,7 @@
 > Request
 
 ```shell
-curl 'https://api.salesforceiq.com/v2/contacts/56b12644e4b08b67fd722d75'
+curl 'https://api.salesforceiq.com/v2/users/56b12644e4b08b67fd722d75'
   -X GET
   -u $API_KEY:$API_SECRET
   -H 'Accept: application/json'

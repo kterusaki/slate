@@ -9,7 +9,7 @@ curl 'https://api.salesforceiq.com/v2/contacts/56b12644e4b08b67fd722d75'
   -H 'Content-Type: application/json'
   -H 'Accept: application/json'
   -d '{
-        "id": "56b12644e4b08b67fd722d75", // required
+        "id": "56b12644e4b08b67fd722d75",
         "properties": {
           "email": [
             {

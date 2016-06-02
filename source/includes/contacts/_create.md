@@ -31,7 +31,7 @@ curl 'https://api.salesforceiq.com/v2/contacts'
           "twhan": [ { "value": "@cavocado" } ],
           "name": [ { "value": "Cecilia Avocado" } ],
           "company": [ { "value": "Avocado, Inc." } ],
-          "title": [ { "value": "CEO", } ],
+          "title": [ { "value": "CEO" } ],
           "experience": [
             {
               "value": "Avocado, Inc.",

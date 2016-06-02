@@ -9,8 +9,8 @@ curl 'https://api.salesforceiq.com/v2/events'
   -H 'Content-Type: application/json'
   -H 'Accept: application/json'
   -d '{
-        "subject": "",
-        "body": "",
+        "subject": "Phone Call",
+        "body": "Discussed contract negotiations",
         "participantIds": [
           { 
             "type": "email",

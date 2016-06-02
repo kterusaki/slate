@@ -3,7 +3,7 @@
 > Request
 
 ```shell
-curl "http://api.salesforceiq.com/v2/accounts"
+curl "https://api.salesforceiq.com/v2/accounts"
   -X POST
   -u $API_KEY:$API_SECRET
   -H 'Content-Type: application/json'

@@ -23,7 +23,7 @@ curl 'https://api.salesforceiq.com/v2/lists/56f087b0e4b0584aa39fbba8/listitems'
       }'
 
 # Account-based List
-curl 'https://api.salesforceiq.com/v2/lists/56f087b0e4b0584aa39fbba8/listitems'
+curl 'https://api.salesforceiq.com/v2/lists/56f1b185e4b0d37eabe8c2b0/listitems'
   -X POST
   -u $API_KEY:$API_SECRET
   -H 'Content-Type: application/json'

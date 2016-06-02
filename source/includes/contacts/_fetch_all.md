@@ -22,19 +22,19 @@ curl 'https://api.salesforceiq.com/v2/contacts?modifiedDate=1458165069813'
   -H 'Accept: application/json'
 
 # Retrieve two Contacts starting at index 1
-curl 'https://api.salesforceiq.com/v2/contacts?_start=1&limit=2'
+curl 'https://api.salesforceiq.com/v2/contacts?_start=1&_limit=2'
   -X GET
   -u $API_KEY:$API_SECRET
   -H 'Accept: application/json'
 
 # Retrieve Contacts by email address
-curl 'https://api.salesforceiq.com/v2/contacts?properties.email="c.avocado@avocado.com"
+curl 'https://api.salesforceiq.com/v2/contacts?properties.email="c.avocado@avocado.com"'
   -X GET
   -u $API_KEY:$API_SECRET
   -H 'Accept: application/json'
 
 # Retrieve Contacts by phone number
-curl 'https://api.salesforceiq.com/v2/contacts?properties.phone="14152990341"
+curl 'https://api.salesforceiq.com/v2/contacts?properties.phone="14152990341"'
   -X GET
   -u $API_KEY:$API_SECRET
   -H 'Accept: application/json'
